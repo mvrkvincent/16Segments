@@ -39,23 +39,27 @@ In addition to the entry file:
 
 ### Implementation Timeline
 
-**Day 1**: Setup modules, `Webpack`, and `D3.js`. Export CE data from BLS as `.xlsx`.
+**Day 1**: Setup modules, `Webpack`, and `D3.js`. Export CE data from BLS as `.xlsx`
+
 TODO: 
 - Format `.xlsx` data and convert to `.csv`
 - Create skeleton for necessary js components.
 
 **Day 2**: Review `D3.js` documentation and select appropriate chart type. Begin work on data retrieval tool.
+
 TODO: 
 - Build `data.js`
 - Make successful data requests to `.csv`
 
 **Day 3**: Build out `chart.js`
+
 TODO:
 - Create chart using overview data
 - Implement functionality for data refinement based on demographics and metropolitain area
 
 
 **Day 4**: Build out UI
+
 TODO: 
 - Create toggle links for data refinement
 - Build modal for additional information
