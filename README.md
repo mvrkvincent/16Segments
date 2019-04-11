@@ -21,7 +21,7 @@ In addition, this project will include:
 
 This visualization will consist of a single screen containing a primary data list, interactive graph, a panel to refine data by region/demographic, and links to the information modal, Github and LinkedIn.  
 
-![wireframe]()
+![toast_wireframe](https://github.com/mrkvncnt/Toast/blob/master/toast_wireframe.jpg)
 
 ### Architecture and Technologies
 
