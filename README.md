@@ -17,11 +17,11 @@ In addition, this project will include:
 - [ ] An informational modal describing the CE methodology with links to raw data
 - [ ] A production README
 
-### Wireframes
+### Wireframe
 
-This visualization will consist of a single screen containing a primary data list, interactive graph, a panel to refine data by region/demographic, and links to the information modal, Github and LinkedIn.  
+This visualization consists of a single screen<sub>(a)</sub> containing a primary data list<sub>(b)</sub>, interactive graph<sub>(c)</sub>, a panel to refine data by region/demographic<sub>(d)</sub>, and links to the information modal, Github and LinkedIn<sub>(e)</sub>. Footer<sub>(f)</sub> includes copywright.
 
-![wireframe]()
+![toast_wireframe](https://github.com/mrkvncnt/Toast/blob/master/toast_wireframe.jpg)
 
 ### Architecture and Technologies
 
