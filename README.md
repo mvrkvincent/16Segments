@@ -17,13 +17,17 @@ In addition, this project will include:
 - [ ] An informational modal describing the CE methodology with links to raw data
 - [ ] A production README
 
+### Data & APIs
+
+CE Data is freely available through API and direct download (`.xlsx`) from the [BLS](https://www.bls.gov/cex/home.htm). This visualization uses locally stored data stored as `.csv`.
+
 ### Wireframe
 
 This visualization consists of a single screen<sub>(a)</sub> containing a primary data list<sub>(b)</sub>, interactive graph<sub>(c)</sub>, a panel to refine data by region/demographic<sub>(d)</sub>, and links to the information modal, Github and LinkedIn<sub>(e)</sub>. Footer<sub>(f)</sub> includes copywright.
 
 ![toast_wireframe](https://github.com/mrkvncnt/Toast/blob/master/toast_wireframe.jpg)
 
-### Architecture and Technologies
+### Architecture & Technologies
 
 Toast is built with:
 
@@ -65,7 +69,7 @@ TODO:
 - Build modal for additional information
 
 
-### Bonus features
+### Bonus Features
 
 The data set provided by CE is robust, future directions can include:
 
