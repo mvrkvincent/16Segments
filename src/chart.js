@@ -18,6 +18,11 @@ const Graph = () => {
     .sum(d => d.size)
     .sort(a,b => b.value - a.value)
 
+  const arc = d3.arc()
+    .innerRadius(d => d.y0)
+    .outerRadius(d => d.y1)
+    .startAngle(d => d.x0)
+    .endAngle(d.x1)
   
 
 
