@@ -25,7 +25,7 @@ CE Data is freely available through API and direct download (`.xlsx`) from the [
 
 This visualization consists of a single screen<sub>(a)</sub> containing a primary data list<sub>(b)</sub>, interactive graph<sub>(c)</sub>, a panel to refine data by region/demographic<sub>(d)</sub>, and links to the information modal, Github and LinkedIn<sub>(e)</sub>. Footer<sub>(f)</sub> includes copywright.
 
-![toast_wireframe](https://github.com/mrkvncnt/Toast/blob/master/toast_wireframe.jpg)
+![toast_wireframe](https://github.com/mrkvncnt/Toast/blob/master/assets/toast_wireframe.jpg)
 
 ### Architecture & Technologies
 
