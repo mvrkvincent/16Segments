@@ -1,0 +1,19 @@
+{
+  "name": "toast",
+  "version": "1.0.0",
+  "description": "A Consumer Spending Visualization",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrkvncnt/Toast.git"
+  },
+  "author": "Mark Vincent Rodriguez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mrkvncnt/Toast/issues"
+  },
+  "homepage": "https://github.com/mrkvncnt/Toast#readme"
+}
