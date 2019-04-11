@@ -1,4 +1,4 @@
-export const testData = {
+const testData = {
   "name": "Expenses", 
   "children": [{ 
       "name": "Food", 
