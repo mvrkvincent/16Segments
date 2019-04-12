@@ -1,8 +1,8 @@
 const data = testData;
 
-const color = d3.scaleOrdinal(d3.quantize(d3.interpolateRainbow, data.children.length + 1));
+const color = d3.scaleOrdinal(d3.quantize(d3.interpolateRainbow, data.children.length));
 
-var dia = 400;
+var dia = 450;
 var rad = dia / 2;
 
 const graph = d3.select('svg')
@@ -31,6 +31,7 @@ graph.selectAll('path')
   .append('path')
   .attr('display', d => d.depth ? null : 'none')
   .attr('d', arc)
-  .style('stroke', '#fff')
+  .style('stroke', 'white')
+  .style('stroke-width', 2)
   .style('fill', d => color((d.children ? d : d.parent).data.category));
 
