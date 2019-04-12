@@ -2,7 +2,7 @@
 
 ### Overview
 
-Each year, the United States Bureau of Labor and Statistics (BLS) publishes data from the Consumer Expenditure Survey (CE) covering a range of consumer expenses as well as household income. This data reflects the spending habbits of millions of Americans and can be used to guage the relative importance of various goods and services. Toast highlights the major segments of American spending with a special focus on specific demographics and metropolitain areas.  
+Each year, the United States Bureau of Labor and Statistics (BLS) publishes data from the Consumer Expenditure Survey (CE) covering a range of consumer expenses as well as household income. This data reflects the spending habbits of millions of Americans and can be used to guage the relative importance of various goods and services. 16|Segments highlights the major segments of American spending with a special focus on specific demographics and metropolitain areas.  
 
 ### Functionality & MVP  
 16|Segments usurs will be able to:
