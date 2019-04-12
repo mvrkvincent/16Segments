@@ -1,5 +1,5 @@
 {
-  "name": "toast",
+  "name": "16Segments",
   "version": "1.0.0",
   "description": "A Consumer Spending Visualization",
   "main": "index.js",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mrkvncnt/Toast.git"
+    "url": "git+https://github.com/mrkvncnt/16Segments.git"
   },
   "author": "Mark Vincent Rodriguez",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mrkvncnt/Toast/issues"
+    "url": "https://github.com/mrkvncnt/16Segments/issues"
   },
-  "homepage": "https://github.com/mrkvncnt/Toast#readme",
+  "homepage": "https://github.com/mrkvncnt/16Segments#readme",
   "dependencies": {
     "@babel/core": "^7.4.3",
     "@babel/preset-env": "^7.4.3",
