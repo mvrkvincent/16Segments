@@ -1,11 +1,11 @@
-## Toast: A Consumer Spending Visualization
+## 16|Segments: A Consumer Spending Visualization
 
 ### Overview
 
 Each year, the United States Bureau of Labor and Statistics (BLS) publishes data from the Consumer Expenditure Survey (CE) covering a range of consumer expenses as well as household income. This data reflects the spending habbits of millions of Americans and can be used to guage the relative importance of various goods and services. Toast highlights the major segments of American spending with a special focus on specific demographics and metropolitain areas.  
 
 ### Functionality & MVP  
-Toast usurs will be able to:
+16|Segments usurs will be able to:
 
 - [ ] See a broad overview of major American expenses by major category
 - [ ] Refine spending by age and income demographics
@@ -29,7 +29,7 @@ This visualization consists of a single screen<sub>(a)</sub> containing a primar
 
 ### Architecture & Technologies
 
-Toast is built with:
+16|Segments is built with:
 
 - `JavaScript` for data retrieval and computation
 - `D3.js` + `HTML5` + `SVG` + `CSS` for interactive visualization
