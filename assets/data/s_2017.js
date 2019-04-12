@@ -70,14 +70,14 @@ const parseData = (data, selector) => {
       level = 1;
     } else if ( cat !== '*' && val === '-' ) {
       parsed[level].children.push({ 'category': cat, 'children': [] });
-      level += 1;
+      level++;
     } else {
       parsed.push({ 'category': cat, 'cost': val });
     };
 
   };
-  debugger
+
   return parsed;
 };
 
-console.log(parseData(s2017T, 15));
+console.log(parseData(s2017T, 1));
