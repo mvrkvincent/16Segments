@@ -24,7 +24,7 @@
 
 const s2017T = [
   ["Demographic", "Taxes","*", "Food", "Groceries", "Bread & Grain", "Grains", "Baked Goods", "Meat", "Beef", "Pork", "Other Meat", "Poultry", "Seafood", "Eggs", "Dairy", "Milk", "Other Dairy", "Produce", "Fresh Fruit", "Fresh Vegetables", "Processed Fruit", "Processed Vegetables", "Other Food", "Sugar & Sweets", "Fats & Oils", "Misc.Food", "Beverages", "Groceries Away", "Restaurants","*", "Alcohol","*", "Housing", "Shelter", "Owned Home", "Mortgage Fees & Interest", "Property Taxes", "Maintenance", "Rent", "Other Lodging", "Utilities & Services", "Natural Gas", "Electricity","Other Fuels", 
-    "Phone Servies", "Residential Phone", "Cell Phone"," Water & Other", "Household Operations", "Personal Services", "Other Household Expenses", "Housekeeping Supplies", "Laundry & Cleaning Supplies", "Other Household Products", "Postage & Stationery", "Household Furnishings & Appliances", "Household Textiles", "Furniture", "Floor Coverings", "Major Appliances", "Small Appliances & Housewares", "Miscellaneous Household Equipment","*", "Apparel", "Men & Boys", "Women & Girls", "Children Under 2", "Footwear", "Other Apparel","*", "Transportation", "Vehicle Purchases",
+    "Phone Servies", "Residential Phone", "Cell Phone","Water & Other", "Household Operations", "Personal Services", "Other Household Expenses", "Housekeeping Supplies", "Laundry & Cleaning Supplies", "Other Household Products", "Postage & Stationery", "Household Furnishings & Appliances", "Household Textiles", "Furniture", "Floor Coverings", "Major Appliances", "Small Appliances & Housewares", "Miscellaneous Household Equipment","*", "Apparel", "Men & Boys", "Women & Girls", "Children Under 2", "Footwear", "Other Apparel","*", "Transportation", "Vehicle Purchases",
     "Cars & Trucks, New", "Cars & trucks, Used", "Other Vehicles", "Fuel & Motor Oil", "Other Vehicle Expenses", "Vehicle Finance Charges", "Maintenance & Repairs", "Vehicle Insurance", "Vehicle Rental & Fees", "Public Transportation", "Healthcare", "Health insurance", "Medical Services", "Drugs", "Medical Supplies","*", "Entertainment", "Fees & Admissions", "AV Equipment & Services", "Other Entertainment", "Pets", "Toys & Hobbies", "Miscellaneous Equipment","*", "Personal Care","*", "Reading","*", "Education","*", "Tobacco Products","*", "Miscellaneous","*",
     "Cash Contributions","*", "Personal Insurance & Pensions", "Personal Insurance", "Pensions & Social Security"],
 
@@ -66,11 +66,10 @@ const parseData = (data, selector) => {
 
     if ( i === 0 ) {
       parsed.push({ 'category': val, 'children': [] });
-      level += 1;
     } else if ( cat === '*') {
       level = 1;
     } else if ( cat !== '*' && val === '-' ) {
-      parsed.push({ 'category': cat, 'children': [] });
+      parsed[level].children.push({ 'category': cat, 'children': [] });
       level += 1;
     } else {
       parsed.push({ 'category': cat, 'cost': val });
@@ -81,4 +80,4 @@ const parseData = (data, selector) => {
   return parsed;
 };
 
-console.log(parseData(s2017T, 1));
+console.log(parseData(s2017T, 15));
