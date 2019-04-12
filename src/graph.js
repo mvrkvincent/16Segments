@@ -2,8 +2,8 @@ const data = testData;
 
 const color = d3.scaleOrdinal(d3.quantize(d3.interpolateRainbow, data.children.length));
 
-var dia = 450;
-var rad = dia / 2;
+const dia = 450;
+const rad = dia / 2;
 
 const graph = d3.select('svg')
   .attr('width', dia)
@@ -13,18 +13,17 @@ const graph = d3.select('svg')
 
 const partition = d3.partition().size([2 * Math.PI, rad]);
 
-const root = d3.hierarchy(data)
+const root = partition(
+  d3.hierarchy(data)
   .sum(d => d.cost)
-  .sort((a, b) => b.value - a.value);
-
-partition(root);
-
+  .sort((a, b) => b.value - a.value));
+  
 const arc = d3.arc()
   .innerRadius(d => d.y0)
   .outerRadius(d => d.y1)
   .startAngle(d => d.x0)
   .endAngle(d => d.x1);
-
+  
 graph.selectAll('path')
   .data(root.descendants())
   .enter()
@@ -34,5 +33,11 @@ graph.selectAll('path')
   .style('stroke-width', 2)
   .style('stroke', 'white')
   .style('fill-opacity', 0.8)
-  .style('fill', d => color((d.children ? d : d.parent).data.category))
+  .style('fill', d => { 
+      if ( d.depth === 1 || d.children ) {
+        return color(d.data.category)
+      } else {
+        return color(d.parent.data.category)
+      }
+    });
 
