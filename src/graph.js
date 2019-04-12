@@ -31,7 +31,8 @@ graph.selectAll('path')
   .append('path')
   .attr('display', d => d.depth ? null : 'none')
   .attr('d', arc)
-  .style('stroke', 'white')
   .style('stroke-width', 2)
-  .style('fill', d => color((d.children ? d : d.parent).data.category));
+  .style('stroke', 'white')
+  .style('fill-opacity', 0.8)
+  .style('fill', d => color((d.children ? d : d.parent).data.category))
 
