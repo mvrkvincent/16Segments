@@ -1,7 +1,7 @@
-const testData = {
+const introData = {
   'category': 'Expenses', 'children': [{
     'category': 'Food',
-    'children': [{ 'category': 'sub', 'cost': 5 }, { 'category': 'sub2', 'cost': 5 }]
+    'children': [{ 'category': 'sub', 'cost': 5 }, { 'category': 'sub2', 'cost': 2 }]
   }, {
     'category': 'Alcohol',
     'cost': 3
@@ -10,16 +10,16 @@ const testData = {
     'children': [{ 'category': 'sub', 'cost': 3 }, { 'category': 'sub2', 'cost': 3 }, { 'category': 'sub3', 'cost': 3 }, { 'category': 'sub4', 'cost': 3 }, { 'category': 'sub5', 'cost': 3 }]
   }, {
     'category': 'Apparel & Services',
-    'children': [{ 'category': 'sub', 'cost': 3 }, { 'category': 'sub2', 'cost': 3 }, { 'category': 'sub3', 'cost': 3 }, { 'category': 'sub4', 'cost': 3 }, { 'category': 'sub5', 'cost': 3 }]
+    'cost': 15
   }, {
     'category': 'Transportation',
-    'children': [{ 'category': 'sub', 'cost': 4 }, { 'category': 'sub2', 'cost': 4 }, { 'category': 'sub3', 'cost': 4 }, { 'category': 'sub4', 'cost': 4 }]
+    'children': [  { 'category': 'sub2', 'cost': 4 }, { 'category': 'sub3', 'cost': 4 }, { 'category': 'sub4', 'cost': 4 }]
   }, {
     'category': 'Healthcare',
-    'children': [{ 'category': 'sub', 'cost': 4 }, { 'category': 'sub2', 'cost': 4 }, { 'category': 'sub3', 'cost': 4 }, { 'category': 'sub4', 'cost': 4 }]
+    'children': [{ 'category': 'sub3', 'cost': 12 }, { 'category': 'sub4', 'cost': 4 }]
   }, {
     'category': 'Entertainment',
-    'children': [{ 'category': 'sub', 'cost': 4 }, { 'category': 'sub2', 'cost': 4 }, { 'category': 'sub3', 'cost': 4 }, { 'category': 'sub4', 'cost': 4 }]
+    'children': [{ 'category': 'sub', 'cost': 4 }, { 'category': 'sub2', 'cost': 4 }, { 'category': 'sub3', 'cost': 1 }, { 'category': 'sub4', 'cost': 7 }]
   }, {
     'category': 'Personal Care',
     'cost': 4

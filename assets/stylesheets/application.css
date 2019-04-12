@@ -22,7 +22,8 @@
 
 .title {
   font-size: 24px;
-  display: none;
+  line-height: 30px;
+  /* display: none; */
 }
 
 .title-hidden {
@@ -33,19 +34,14 @@
   font-size: 24px;
   width: 100%;
   text-align: left;
-  /* visibility: hidden; */
+  visibility: hidden;
 }
 
 .app {
+  width: 100%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-}
-
-.details {
-  width: 350px;
-  height: 400px;
-  border: 1px solid lightgrey;
 }
 
 .graph {
