@@ -1,0 +1,40 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Raleway';
+}
+
+.main {
+  width: 80%;
+  /* max-width: 1000px; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
+}
+
+.title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.app {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid lightgrey;
+}
+
+.details {
+  width: 300px;
+  height: 300px;
+  margin-left: 50px;
+  border: 1px solid lightgrey;
+}
+
+.graph {
+  margin: 30px;
+}
