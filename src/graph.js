@@ -1,4 +1,4 @@
-const data = parseData(s2017, 1);
+const data = parseData(s2017, 10);
 const color = d3.scaleOrdinal(d3.quantize(d3.interpolateRainbow, data.children.length));
 
 const dia = 450;

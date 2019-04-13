@@ -48,9 +48,10 @@ const parseData = (data, selector) => {
       j++;
 
     } else if (level === 2) {
-      sub2 = base
+      sub1 = base
       .children[base.children.length - 1]
-      .children[[[base.children.length - 1].children].length - 1]
+      
+      sub2 = sub1.children[sub1.children.length - 1];
 
 
       if (val === '') {
@@ -62,20 +63,18 @@ const parseData = (data, selector) => {
       j++;
 
     } else if (level === 3) {
-      sub2 = base
+      sub1 = base
         .children[base.children.length - 1]
-        .children[[[base.children.length - 1].children].length - 1]
+      
+      sub2 = sub1.children[sub1.children.length - 1]
       
       sub3 = sub2.children[sub2.children.length - 1]
 
       sub3.children.push(child)
       j++;
-
     };
 
   };
 
   return parsed[0];
 };
-
-console.log(parseData(s2017, 1))
