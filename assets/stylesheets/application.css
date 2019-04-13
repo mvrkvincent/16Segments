@@ -1,8 +1,6 @@
 .content {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   font-family: 'Raleway';
 }
 
@@ -40,7 +38,7 @@
 .app {
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
 }
 
