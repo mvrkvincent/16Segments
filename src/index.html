@@ -16,7 +16,15 @@
 <body>
   <div class="content">
     <div class="main">
-      <div class="nav">16|Segments: Age_</div>
+      <div class="nav">16|Segments: 
+        <div class="data-selector">
+        <button class="data-options">Demographic</button>
+        <div class="dropdown-content">
+          <a href="#">Age_</a>
+          <a href="#">Household Size_</a>
+          <a href="#">Income Level_</a>
+        </div>
+      </div>
       <div class="app">
         <div class="title"><div>16|Segments:</div><div>A Consumer Spending Visualization</div></div>
         <div class="detail"></div>
@@ -25,8 +33,8 @@
       </div>
     </div>
   </div>
-
   <script type="text/javascript" src="assets/data/data.js"></script>
+  <script type="text/javascript" src="src/nav.js"></script>
   <script type="text/javascript" src="src/parse.js"></script>
   <script type="text/javascript" src="src/graph.js"></script>
   
