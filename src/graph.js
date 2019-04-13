@@ -1,4 +1,5 @@
-const data = parseData(s2017, 10);
+const data = parseData(s2017, 1);
+
 const color = d3.scaleOrdinal(d3.quantize(d3.interpolateRainbow, data.children.length));
 
 const dia = 450;
@@ -33,10 +34,13 @@ graph.selectAll('path')
   .style('stroke', 'white')
   .style('fill-opacity', 0.8)
   .style('fill', d => { 
-      if ( d.depth === 1 || d.children ) {
+      if ( d.depth === 1 ) {
         return color(d.data.category)
-      } else {
+      } else if (d.depth === 2) {
         return color(d.parent.data.category)
+      } else if (d.depth === 3){
+        return color(d.parent.parent.data.category)
+      } else if (d.depth === 4) {
+        return color(d.parent.parent.parent.data.category)
       }
     });
-
