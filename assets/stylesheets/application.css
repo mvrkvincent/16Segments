@@ -45,3 +45,27 @@
 .graph {
   margin: 30px 0;
 }
+
+.select {
+  border: none;
+  background-color:lightgray;
+}
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.data-options {
+  min-width: 50px;
+  position: absolute;
+  background-color: #f1f1f1;
+  display: none;
+}
+
+.data-opt a {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+}
