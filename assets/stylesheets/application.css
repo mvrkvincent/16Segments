@@ -29,6 +29,8 @@
 }
 
 .nav {
+  display: flex;
+  flex-direction: row;
   font-size: 24px;
   width: 100%;
   text-align: left;
@@ -47,25 +49,43 @@
 }
 
 .select {
+  color: darkgray;
   border: none;
-  background-color:lightgray;
-}
-
-
-.dropdown {
-  position: relative;
-  display: inline-block;
+  font: inherit;
+  outline: none;
+  margin: 0px 1px;
 }
 
 .data-options {
+  margin: 0 10px;
+  z-index: 1;
   min-width: 50px;
   position: absolute;
-  background-color: #f1f1f1;
+  background: none;
   display: none;
 }
 
-.data-opt a {
+.data-options a {
+  color: darkgray;
+  text-decoration: none;
   display: flex;
   flex-direction: column;
+  margin: 4px 0;
+
+}
+
+.data-options a:hover {
+  color:black;
   text-decoration: none;
+}
+
+.data-selector:hover .data-options {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.select:hover {
+  cursor: pointer;
+  color: #000000;
 }
