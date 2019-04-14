@@ -11,21 +11,19 @@ document.getElementById("subSelector").innerHTML =
     
     const assignOptions = () => {
       const selectedSub = document.getElementById("demographic").innerHTML
-      
       const options = document.getElementById("opt2")
+
       if (selectedSub === 'Age Group |') {
         document.getElementById("sub").innerHTML = `${ageGroup[0][0]}`;
-        debugger
-        options.innerHTML = ageGroup.map((cat) => `<a onClick="selectData(${cat[1]})>${cat[0]}</a>`)
+        test = options.innerHTML = ageGroup.map((cat) => `<a onClick="selectData("${cat[1]}")>${cat[0]}</a>`)
         .slice(',').join('');
-        debugger
       } else if (selectedSub === 'Household Size |') {
         document.getElementById("sub").innerHTML = `${householdSize[0][0]}`;
-        options.innerHTML = householdSize.map((cat) => `<a onClick="selectData(${cat[1]})>${cat[0]}</a>`)
+        options.innerHTML = householdSize.map((cat) => `<a onClick="selectData("${cat[1]}")>${cat[0]}</a>`)
         .slice(',').join('');
       } else if (selectedSub === 'Income Level |'){
         document.getElementById("sub").innerHTML = `${incomeLevel[0][0]}`;
-        options.innerHTML = incomeLevel.map((cat) => `<a onClick="selectData(${cat[1]})>${cat[0]}</a>`)
+        options.innerHTML = incomeLevel.map((cat) => `<a onClick="selectData("${cat[1]}")>${cat[0]}</a>`)
         .slice(',').join('');
       }
     }
