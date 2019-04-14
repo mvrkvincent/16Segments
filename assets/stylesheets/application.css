@@ -15,10 +15,33 @@
   transform: translate(-50%, -50%);
   justify-content: center;
   align-items: center;
-  border-bottom: 1px solid lightgrey;
+  
 }
 
+.top-bar {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 
+#about {
+  display: flex;
+  flex-direction: row;
+  height: 24px;
+}
+
+#about a {
+  font-size: 20px;
+  color: #999999;
+  text-decoration: none;
+  align-content: center;
+  margin: 0 10px;
+}
+
+.app {
+  border-bottom: 1px solid lightgrey;
+}
 
 #title {
   display: flex;
@@ -26,7 +49,6 @@
   width: 100%;
   font-size: 24px;
   line-height: 30px;
-  cursor: pointer;
   overflow: hidden;
 }
 
@@ -35,13 +57,12 @@
   color: #999999;
 }
 
-.nav {
+#nav {
   display: flex;
   flex-direction: row;
   font-size: 24px;
   text-align: left;
   width: 100%;
-  /* overflow: hidden; */
 }
 
 .header {
@@ -58,6 +79,7 @@
 
 .graph {
   margin: 30px 0;
+  cursor: pointer;
 }
 
 .ledger {
@@ -181,6 +203,14 @@
   display: flex;
   flex-direction: column;
   cursor: pointer;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  color: #999999;
+  font-size: 10px;
 }
 
 

@@ -50,7 +50,7 @@ const renderGraph = () => {
   });
   
 
-  buildLedger(data, root);
+  buildLedger(root);
 
 
 }
