@@ -8,6 +8,7 @@ document.getElementById("demoSelector").innerHTML =
 `<button id="demographic" class="select">National Average</button>
 <div id="opt" class="data-options">${age}${size}${income}</div>`
 
+document.getElementById("selectedData").innerHTML = 1;
 
 const changeDemo = dataType => {
 
@@ -31,6 +32,7 @@ const changeDemo = dataType => {
     document.getElementById("opt").innerHTML = `${age}${size}${income}`
     document.getElementById("sub").innerHTML = null;
     document.getElementById("opt2").innerHTML = null;
+    document.getElementById("selectedData").innerHTML = 1;
   }
 
 }
