@@ -1,5 +1,6 @@
 const enter = () => {
   document.getElementById("title").classList.add('hidden');
-  document.getElementById("nav").classList.remove('hidden2')
+  document.getElementById("ledger").classList.remove('hidden');
+  document.getElementById("nav").classList.remove('hidden');
 }
 

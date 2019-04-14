@@ -1,5 +1,4 @@
 const renderGraph = () => {
-  // debugger
   const selector = parseInt(document.getElementById("graph").innerHTML);
 
   let data = parseData(s2017, selector);
@@ -9,7 +8,7 @@ const renderGraph = () => {
   const dia = 500;
   const rad = dia / 2;
 
-  const graph = d3.select('svg')
+  const graph = d3.select('#graph')
     .attr('width', dia)
     .attr('height', dia)
     .append('g')
@@ -38,14 +37,19 @@ const renderGraph = () => {
     .style('stroke', 'white')
     .style('fill-opacity', 0.8)
     .style('fill', d => { 
-        if ( d.depth === 1 ) {
-          return color(d.data.category)
-        } else if (d.depth === 2) {
-          return color(d.parent.data.category)
-        } else if (d.depth === 3){
-          return color(d.parent.parent.data.category)
-        } else if (d.depth === 4) {
-          return color(d.parent.parent.parent.data.category)
-        }
-      });
+      if ( d.depth === 1 ) {
+        return color(d.data.category)
+      } else if (d.depth === 2) {
+        return color(d.parent.data.category)
+      } else if (d.depth === 3){
+        return color(d.parent.parent.data.category)
+      } else if (d.depth === 4) {
+        return color(d.parent.parent.parent.data.category)
+      }
+  });
+  
+
+  buildLedger(data, color);
+
+
 }
