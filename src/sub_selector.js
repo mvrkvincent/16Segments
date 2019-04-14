@@ -15,7 +15,6 @@ const assignOptions = dataType => {
     document.getElementById("sub").innerHTML = `${ageGroup[0][0]}`;
     test = options.innerHTML = ageGroup.map((cat, i) => `<a onClick="selectData('${cat},${i}')">${cat[0]}</a>`)
     .slice(',').join('');
-    // debugger
   } else if (dataType === 'size') {
     document.getElementById("sub").innerHTML = `${householdSize[0][0]}`;
     options.innerHTML = householdSize.map((cat, i) => `<a onClick="selectData('${cat},${i}')">${cat[0]}</a>`)
@@ -30,6 +29,7 @@ const assignOptions = dataType => {
 
 const selectData = (dataType) => {
   const selection = dataType.split(",");
-  const header = document.getElementById("sub").innerHTML = selection[0];
-  const graph = document.getElementById("graph").innerHTML = parseInt(selection[1]);
+  document.getElementById("sub").innerHTML = selection[0];
+  document.getElementById("graph").innerHTML = selection[1];
+  renderGraph();
 }

@@ -1,11 +1,11 @@
 const age = `<a onClick="changeDemo('age')">Age Group</a>`;
 const size = `<a onClick="changeDemo('size')">Household Size</a>`;
 const income = `<a onClick="changeDemo('income')">Income Level</a>`;
-const national = `<a onClick="changeDemo('average')">National Average</a>`;
+const national = `<a onClick="changeDemo('national')">National Average</a>`;
 
 document.getElementById("demoSelector").innerHTML =
 `<button id="demographic" class="select">National Average</button>
-<div id="opt" class="data-options">${age}${size}${income}</div>` 
+<div id="opt" class="data-options">${age}${size}${income}</div>`
 
 const changeDemo = dataType => {
 
@@ -24,12 +24,13 @@ const changeDemo = dataType => {
     document.getElementById("opt").innerHTML = `${national}${age}${size}`
     assignOptions(dataType)
 
-  } else if (dataType === 'average') {
+  } else if (dataType === 'national') {
     document.getElementById("demographic").innerHTML = 'National Average';
     document.getElementById("opt").innerHTML = `${age}${size}${income}`
     document.getElementById("sub").innerHTML = null;
     document.getElementById("opt2").innerHTML = null;
-    document.getElementById("graph").innerHTML = null;
+    document.getElementById("graph").innerHTML = 1;
+    renderGraph();
   }
 
 }
