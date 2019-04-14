@@ -19,8 +19,9 @@ const renderGraph = () => {
   const root = partition(
     d3.hierarchy(data)
     .sum(d => d.cost)
-    .sort((a, b) => b.value - a.value));
-    
+    .sort((a, b) => b.value - a.value)
+  );
+
   const arc = d3.arc()
     .innerRadius(d => d.y0)
     .outerRadius(d => d.y1)
@@ -49,7 +50,7 @@ const renderGraph = () => {
   });
   
 
-  buildLedger(data, color);
+  buildLedger(data, root);
 
 
 }

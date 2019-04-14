@@ -1,21 +1,16 @@
-const buildLedger = (data, color) => {
+const buildLedger = (data, root) => {
 
-  const square = `<svg id="icon" width="14" height="14"><rect x="0" y="0" width="14" height ="14"/></svg>`
   let ledgerItems = [];
-  let squares = [];
 
 
-
-
-  for (let i = 0; i < data.children.length; i++) {
-    ledgerItems.push(`<div class="ledger-item">${square} ${data.children[i].category}</div>`)
+  for (let i = 0; i < root.children.length; i++) {
+    const ledgerVal = root.children[i].value;
+    ledgerItems.push(`<li class="ledger-item">
+                          <div class="value">${ledgerVal}</div>
+                          <span>${data.children[i].category}_</span>
+                      </li>`)
   }
 
   document.getElementById("ledger-items").innerHTML = ledgerItems.slice(',').join('');
-
-
-  const ledgerIcons = d3.selectAll('#icon').append("g");
-
-
 
 };
