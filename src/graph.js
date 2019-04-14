@@ -1,5 +1,5 @@
-const selector = document.getElementById("selectedData").innerHTML;
-
+const selector = document.getElementById("graph").innerHTML;
+debugger
 const data = parseData(s2017, selector);
 
 const color = d3.scaleOrdinal(d3.quantize(d3.interpolateRainbow, data.children.length));
