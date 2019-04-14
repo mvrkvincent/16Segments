@@ -12,17 +12,17 @@ const changeDemo = dataType => {
   if (dataType === 'age') {
     document.getElementById("demographic").innerHTML = 'Age Group |';
     document.getElementById("opt").innerHTML = `${size}${income}${national}`
-    assignOptions(dataType);
+    assignOptions(ageGroup);
 
   } else if (dataType === 'size') {
     document.getElementById("demographic").innerHTML = 'Household Size |';
     document.getElementById("opt").innerHTML = `${income}${national}${age}`
-    assignOptions(dataType)
+    assignOptions(householdSize)
 
   } else if (dataType === 'income') {
     document.getElementById("demographic").innerHTML = 'Income Level |';
     document.getElementById("opt").innerHTML = `${national}${age}${size}`
-    assignOptions(dataType)
+    assignOptions(incomeLevel)
 
   } else if (dataType === 'national') {
     document.getElementById("demographic").innerHTML = 'National Average';

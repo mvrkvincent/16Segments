@@ -16,14 +16,14 @@
 <body>
   <div class="content">
     <div class="main">
-      <div class="nav">16  |  Segments  | 
+      <div id="nav" class="hidden2"><div class ="header"onClick="changeDemo('national')">16  |  Segments  |</div>
 
         <div id="demoSelector" class="data-selector"></div>
         <div id="subSelector" class="data-selector"></div>
       
       </div>
       <div class="app">
-        <div class="title"><div>16  |  Segments</div><div>A Consumer Spending Visualization</div></div>
+        <div id="title" class="" onClick="enter()"><div>16  |  Segments</div><div>A Consumer Spending Visualization</div></div>
         <div class="detail"></div>
         <svg id="graph" class="graph">1</svg>
         <div class="detail"></div>
@@ -33,6 +33,7 @@
 
   
   <script type="text/javascript" src="assets/data/data.js"></script>
+  <script type="text/javascript" src="src/title.js"></script>
   <script type="text/javascript" src="src/sub_selector.js"></script>
   <script type="text/javascript" src="src/demo_selector.js"></script>
   <script type="text/javascript" src="src/parse.js"></script>

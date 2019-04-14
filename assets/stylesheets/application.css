@@ -18,23 +18,31 @@
   border-bottom: 1px solid lightgrey;
 }
 
-.title {
+.hidden {
+  display: none;
+}
+
+#title {
   font-size: 24px;
   line-height: 30px;
-  display: none;
+  cursor: pointer;
 }
 
-.title-hidden {
-  display: none;
+
+.hidden2 {
+  visibility: hidden;
 }
 
-.nav {
+.header {
+  cursor: pointer;
+}
+
+#nav {
   display: flex;
   flex-direction: row;
   font-size: 24px;
   width: 100%;
   text-align: left;
-  /* visibility: hidden; */
 }
 
 .app {
@@ -49,7 +57,7 @@
 }
 
 .select {
-  color: darkgray;
+  color: #999999;
   border: none;
   font: inherit;
   outline: none;
@@ -64,10 +72,12 @@
   position: absolute;
   background: none;
   display: none;
+  background: #FFFFFF;
+  opacity: 0.8;
 }
 
 .data-options a {
-  color: darkgray;
+  color: #999999;
   text-decoration: none;
   display: flex;
   flex-direction: column;
@@ -100,10 +110,13 @@
   position: absolute;
   background: none;
   display: none;
+  background: #FFFFFF;
+  opacity: 0.8;
+  border-radius: 5px;
 }
 
 .sub-opt a {
-  color: darkgray;
+  color: #999999;
   text-decoration: none;
   display: flex;
   flex-direction: column;
