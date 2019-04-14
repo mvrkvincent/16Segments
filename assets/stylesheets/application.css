@@ -21,7 +21,7 @@
 .title {
   font-size: 24px;
   line-height: 30px;
-  /* display: none; */
+  display: none;
 }
 
 .title-hidden {
@@ -34,7 +34,7 @@
   font-size: 24px;
   width: 100%;
   text-align: left;
-  visibility: hidden;
+  /* visibility: hidden; */
 }
 
 .app {
@@ -58,7 +58,7 @@
 }
 
 .data-options {
-  margin: 0 10px;
+  margin-left: 4px;
   z-index: 1;
   min-width: 50px;
   position: absolute;

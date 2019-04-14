@@ -12,22 +12,19 @@ document.getElementById("demoSelector").innerHTML =
 const changeDemo = dataType => {
 
   if (dataType === 'age') {
-    document.getElementById("demographic").innerHTML = `Age Group |`;
+    document.getElementById("demographic").innerHTML = 'Age Group |';
     document.getElementById("opt").innerHTML = `${size}${income}${national}`
-    document.getElementById("sub").innerHTML = `Select`;
-    document.getElementById("opt2").innerHTML = `${ageGroup}`;
+    assignOptions();
 
   } else if (dataType === 'size') {
     document.getElementById("demographic").innerHTML = 'Household Size |';
     document.getElementById("opt").innerHTML = `${income}${national}${age}`
-    document.getElementById("sub").innerHTML = `Select`;
-    document.getElementById("opt2").innerHTML = `${householdSize}`;
+    assignOptions()
 
   } else if (dataType === 'income') {
     document.getElementById("demographic").innerHTML = 'Income Level |';
     document.getElementById("opt").innerHTML = `${national}${age}${size}`
-    document.getElementById("sub").innerHTML = `Select`;
-    document.getElementById("opt2").innerHTML = `${incomeLevel}`;
+    assignOptions()
 
   } else if (dataType === 'average') {
     document.getElementById("demographic").innerHTML = 'National Average';
