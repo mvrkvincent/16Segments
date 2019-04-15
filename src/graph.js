@@ -27,6 +27,17 @@ const renderGraph = () => {
     .outerRadius(d => d.y1)
     .startAngle(d => d.x0)
     .endAngle(d => d.x1);
+
+  const displaySubTotal = segment => {
+    const innerData = segment.__data__
+    document.getElementById('sub-cat').innerHTML = `${innerData.data.category}`
+    document.getElementById('sub-val').innerHTML = `${currency.format(innerData.value)}`
+  }
+
+  const revertSubtotal = () => {
+    document.getElementById('sub-cat').innerHTML = "Segment"
+    document.getElementById('sub-val').innerHTML = "$0.00"
+  }
     
   graph.selectAll('path')
     .data(root.descendants())
@@ -37,6 +48,8 @@ const renderGraph = () => {
     .style('stroke-width', 2)
     .style('stroke', 'white')
     .style('fill-opacity', 0.8)
+    .on("mouseover", function () { d3.select(this).style('fill-opacity', 1), displaySubTotal(this) })
+    .on("mouseout", function () { d3.select(this).style('fill-opacity', 0.8), revertSubtotal() }) 
     .style('fill', d => { 
       if ( d.depth === 1 ) {
         return color(d.data.category)
@@ -47,7 +60,10 @@ const renderGraph = () => {
       } else if (d.depth === 4) {
         return color(d.parent.parent.parent.data.category)
       }
-  });
+    });
+    
+  
+  
   
 
   buildLedger(root);

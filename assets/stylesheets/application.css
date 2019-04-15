@@ -15,10 +15,10 @@
   transform: translate(-50%, -50%);
   justify-content: center;
   align-items: center;
-  
+  overflow: hidden;
 }
 
-.top-bar {
+#top-bar {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -45,7 +45,10 @@
 }
 
 .app {
+  margin-top: 5px;
+  width: 100%;
   border-bottom: 1px solid lightgrey;
+  overflow: hidden;
 }
 
 #title {
@@ -79,16 +82,44 @@
 .app {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.visualizer {
+  justify-content: center;
+  text-align: center;
   align-items: center;
 }
 
 .graph {
-  margin: 30px 0;
+  margin-top: 20px;
   cursor: pointer;
+  z-index: -1;
 }
 
-.ledger {
+.sub-total {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  width: 100%;
+  z-index: 2;
+}
+
+#sub-val {
+  border-right: 2px solid #000000;
+  padding-right: 20px;
+  width: 60px;
+}
+
+#sub-cat {
+  padding-left: 20px;
+  color: #999999;
+}
+
+
+#ledger {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -96,7 +127,13 @@
   font-size: 18px;
   height: 100%;
   text-align: left;
+  overflow: hidden;
 }
+
+.filled {
+  color: red;
+}
+
 
 #total {
   text-align: center;
@@ -104,27 +141,44 @@
   height: 100%;
   font-size: 22px;
   font-weight: 900;
+  padding-bottom:10px;
+}
+
+.annual {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+}
+
+.annual-total {
+  text-align: center;
+  width: 166px;
+  height: 100%;
+  font-size: 16px;
+  font-weight: 100;
+  color: #999999;
 }
 
 #ledger-items {
   border-left: 2px solid #000000;
 }
 
+
 .ledger-item {
   margin: 10px 0;
   display: flex;
   flex-direction: row;
+  cursor: pointer;
 }
 
 .ledger span {
   padding-left: 20px;
   color: #999999;
   border-left: 2px solid #000000;
-  cursor: pointer;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
 }
-
-.ledger span:hover {
+.ledger-item:hover span {
   color: #000000;
 }
 
@@ -133,9 +187,12 @@
 }
 
 .value {
-  text-align: center;
+  display: flex;
+  justify-content: center;
   width: 60px;
   padding: 0 20px;
+  text-align: center;
+  align-items: center;
 }
 
 .select {
@@ -151,12 +208,13 @@
 .data-options {
   margin-left: 4px;
   z-index: 1;
-  min-width: 50px;
+  min-width: 200px;
   position: absolute;
   background: none;
   display: none;
   background: #FFFFFF;
-  opacity: 0.8;
+  padding: 0 10px 10px 0;
+  border-radius: 5px;
 }
 
 .data-options a {
@@ -193,14 +251,13 @@
 .sub-opt {
   margin-left: 4px;
   z-index: 1;
-  min-width: 50px;
+  min-width: 200px;
   position: absolute;
   background: none;
   display: none;
   background: #FFFFFF;
-  opacity: 0.8;
   border-radius: 5px;
-  
+  padding: 0 10px 10px 0;
 }
 
 .sub-opt a {
