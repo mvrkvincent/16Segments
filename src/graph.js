@@ -28,12 +28,9 @@ const renderGraph = () => {
     .startAngle(d => d.x0)
     .endAngle(d => d.x1);
 
-  const displaySubTotal = segment => {
-    const innerData = segment.__data__
-    const category = innerData.data.category
-    const color = segment.style.fill
+  const selectSubCat = segment => {
+    const innerData = segment.__data__;
     let subCat;
-
     if (innerData.depth === 1) {
       subCat = innerData.data.category
     } else if (innerData.depth === 2) {
@@ -43,37 +40,35 @@ const renderGraph = () => {
     } else if (innerData.depth === 4) {
       subCat = innerData.parent.parent.parent.data.category
     }
-    
-    const sub = document.getElementById(`${subCat}`)
+    return subCat
+  }
 
+  const displaySubTotal = segment => {
+    const innerData = segment.__data__;
+    const category = innerData.data.category;
+    const color = segment.style.fill;
+    const subCat = selectSubCat(segment);
+    
+    const sub = document.getElementById(`${subCat}`);
+    
     sub.style.color = `${color}`;
     sub.style.fontWeight = '900'
+    document.getElementById(`${subCat}val`).style.color = `${color}`;
     document.getElementById('sub-cat').innerHTML = `${category}`;
     document.getElementById('sub-val').innerHTML = `${currency.format(innerData.value)}`;
+    document.getElementById('sub-val').style.borderColor = `${color}`;
   }
 
   const revertSubtotal = segment => {
-    const innerData = segment.__data__
-    const category = innerData.data.category
-
-    let subCat;
-
-    if (innerData.depth === 1) {
-      subCat = innerData.data.category
-    } else if (innerData.depth === 2) {
-      subCat = innerData.parent.data.category
-    } else if (innerData.depth === 3) {
-      subCat = innerData.parent.parent.data.category
-    } else if (innerData.depth === 4) {
-      subCat = innerData.parent.parent.parent.data.category
-    }
-
-    const sub = document.getElementById(`${subCat}`)
+    const subCat = selectSubCat(segment)
+    const sub = document.getElementById(`${subCat}`);
 
     sub.style.color = '#999999';
-    sub.style.fontWeight = '400'
-    document.getElementById('sub-cat').innerHTML = "Segment"
-    document.getElementById('sub-val').innerHTML = "$0.00"
+    sub.style.fontWeight = '400';
+    document.getElementById(`${subCat}val`).style.color = '#000000';
+    document.getElementById('sub-cat').innerHTML = "Segment";
+    document.getElementById('sub-val').innerHTML = "$0.00";
+    document.getElementById('sub-val').style.borderColor = '#000000';
   }
     
   graph.selectAll('path')
@@ -99,11 +94,6 @@ const renderGraph = () => {
       }
     });
     
-  
-  
-  
-
   buildLedger(root);
-
-
+  
 }
