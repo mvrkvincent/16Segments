@@ -8,9 +8,10 @@ const buildLedger = root => {
   let ledgerItems = [];
   for (let i = 0; i < root.children.length; i++) {
     const ledgerVal = currency.format(root.children[i].value);
+    const category = root.children[i].data.category
     ledgerItems.push(`<li class="ledger-item">
     <div class="value">${ledgerVal}</div>
-    <span id="cat${i}">${root.children[i].data.category}_</span>
+    <span id="${category}">${category}_</span>
     </li>`);          
   };
   
