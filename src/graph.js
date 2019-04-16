@@ -1,22 +1,19 @@
 const renderGraph = dataSet => {
 
-  selectedDataSet = dataSet ? dataSets[dataSet] : s2017;
-
+  let selectedDataSet = dataSet ? dataSets[dataSet] : s2017;
   const selector = parseInt(document.getElementById("graph").innerHTML);
-  let data = parseData(selectedDataSet, selector);
-
+  const data = parseData(selectedDataSet, selector);
+  const colors = [];
   const color = d3.scaleOrdinal(d3.quantize(d3.interpolateRainbow, data.children.length));
-
   const dia = 500;
   const rad = dia / 2;
+  const partition = d3.partition().size([2 * Math.PI, rad]);
 
   const graph = d3.select('#graph')
     .attr('width', dia)
     .attr('height', dia)
     .append('g')
     .attr('transform', 'translate(' + rad + ',' + rad + ')');
-
-  const partition = d3.partition().size([2 * Math.PI, rad]);
 
   const root = partition(
     d3.hierarchy(data)
@@ -90,8 +87,6 @@ const renderGraph = dataSet => {
     document.getElementById('sub-percent').innerHTML = '% 0';
     document.getElementById('sub-percent').style.borderColor = '#000000';
   }
-  
-  const colors = [];
 
   graph.selectAll('path')
     .data(root.descendants())

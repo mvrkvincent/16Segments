@@ -208,7 +208,7 @@
 
 .data-options, .sub-opt {
   display: none;
-  max-height: 320px;
+  /* max-height: 320px; */
   margin-left: 4px;
   z-index: 1;
   position: absolute;
@@ -219,22 +219,10 @@
   transition: all 0.3s ease-in-out;
 }
 
-
-/* .data-options a, .sub-opt a { 
-  background: #FFFFFF;
-} */
-
-/* .data-selector {
-  display: flex;
-  background-color: #FFFFFF;
-  transition: all 0.5s ease;
-  justify-content: space-between;
-} */
-
 .data-options a, .sub-opt a {
   color: #999999;
   text-decoration: none;
-  margin: 0 0 4px 0;
+  margin: 4px 4px 0px 0;
   transition: all 0.5s ease;
 }
 
@@ -251,8 +239,10 @@
 .data-selector:hover .sub-opt {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  cursor: pointer;
+  max-height: 300px;
+  min-width: 125px;
+  max-width: 300px;
+  overflow: auto;
 }
 
 .footer {
