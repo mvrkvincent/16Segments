@@ -30,12 +30,6 @@ const changeDemo = dataType => {
     document.getElementById("opt").innerHTML = `${national}${age}${size}${income}`
     assignOptions('metro2017', metroArea)
 
-    // // temporary placeholder functions
-    // document.getElementById("sub").innerHTML = `Data Unavailable_`;
-    // document.getElementById("opt2").innerHTML = null;
-    // document.getElementById("graph").innerHTML = 1;
-    // renderGraph();
-
   } else if (dataType === 'national') {
     document.getElementById("demographic").innerHTML = 'National Average';
     document.getElementById("opt").innerHTML = `${age}${size}${income}${metro}`

@@ -171,7 +171,6 @@
   margin: 10px 0;
   display: flex;
   flex-direction: row;
-  cursor: pointer;
 }
 
 .ledger span {
@@ -208,7 +207,6 @@
 
 .data-options, .sub-opt {
   display: none;
-  /* max-height: 320px; */
   margin-left: 4px;
   z-index: 1;
   position: absolute;
