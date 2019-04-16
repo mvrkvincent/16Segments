@@ -53,7 +53,7 @@ const renderGraph = () => {
     
     sub.style.color = `${color}`;
     sub.style.fontWeight = '900'
-    document.getElementById(`${subCat}val`).style.color = `${color}`;
+    document.getElementById(`${subCat}-val`).style.color = `${color}`;
     document.getElementById('sub-cat').innerHTML = `${category}`;
     document.getElementById('sub-val').innerHTML = `${currency.format(innerData.value)}`;
     document.getElementById('sub-val').style.borderColor = `${color}`;
@@ -65,12 +65,13 @@ const renderGraph = () => {
 
     sub.style.color = '#999999';
     sub.style.fontWeight = '400';
-    document.getElementById(`${subCat}val`).style.color = '#000000';
-    document.getElementById('sub-cat').innerHTML = "Segment";
+    document.getElementById(`${subCat}-val`).style.color = '#000000';
+    document.getElementById('sub-cat').innerHTML = "Segment_";
     document.getElementById('sub-val').innerHTML = "$0.00";
     document.getElementById('sub-val').style.borderColor = '#000000';
   }
-    
+  const colors = [];
+
   graph.selectAll('path')
     .data(root.descendants())
     .enter()
@@ -84,6 +85,7 @@ const renderGraph = () => {
     .on("mouseout", function () { d3.select(this).style('fill-opacity', 0.8), revertSubtotal(this) }) 
     .style('fill', d => { 
       if ( d.depth === 1 ) {
+        colors.push(color(d.data.category))
         return color(d.data.category)
       } else if (d.depth === 2) {
         return color(d.parent.data.category)
@@ -92,8 +94,8 @@ const renderGraph = () => {
       } else if (d.depth === 4) {
         return color(d.parent.parent.parent.data.category)
       }
-    });
-    
-  buildLedger(root);
-  
+    })
+
+  buildLedger(root, colors);
+
 }

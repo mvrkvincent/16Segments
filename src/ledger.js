@@ -4,13 +4,14 @@ const currency = new Intl.NumberFormat('en-US',{
   minimumFractionDigits: 0
 });
 
-const buildLedger = root => {
+const buildLedger = (root, color) => {
+
   let ledgerItems = [];
   for (let i = 0; i < root.children.length; i++) {
     const ledgerVal = currency.format(root.children[i].value);
     const category = root.children[i].data.category
     ledgerItems.push(`<div id="${category}" class="ledger-item">
-    <div class="value" id="${category}val">${ledgerVal}</div>
+    <div class="value" id="${category}-val" style="border-color:${color[i]}">${ledgerVal}</div>
     <span>${category}_</span>
     </div>`);          
   };
