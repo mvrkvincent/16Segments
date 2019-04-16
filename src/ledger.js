@@ -15,6 +15,8 @@ const buildLedger = (root, color) => {
     <span>${category}_</span>
     </div>`);          
   };
+
+
   
   document.getElementById("ledger-items").innerHTML = ledgerItems.slice(',').join('');
   document.getElementById("total").innerHTML = `${currency.format(root.value)}`;

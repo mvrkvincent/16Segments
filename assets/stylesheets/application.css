@@ -86,11 +86,6 @@
   cursor: pointer;
 }
 
-
-
-
-
-
 .visualizer {
   justify-content: center;
   text-align: center;
@@ -115,7 +110,6 @@
   border-right: 2px solid #000000;
   padding-right: 20px;
   width: 60px;
-  transition: all 0.3s ease;
 }
 
 #sub-cat {
@@ -123,16 +117,11 @@
   color: #999999;
 }
 
-/* #ledger {
-  display: flex;
-  flex-direction: row;
-  justify-content: left;
-  align-items: center;
-  font-size: 18px;
-  height: 100%;
-  text-align: left;
-  overflow: hidden;
-} */
+#sub-percent {
+  border-right: 2px solid #000000;
+  color: #999999;
+  width: 60px;
+}
 
 #ledger-wrapper {
   min-width: 555px;
@@ -217,78 +206,52 @@
   transition: all 0.5s ease;
 }
 
-.data-options {
+.data-options, .sub-opt {
+  display: none;
+  max-height: 320px;
   margin-left: 4px;
   z-index: 1;
-  min-width: 200px;
   position: absolute;
-  background: none;
-  display: none;
   background: #FFFFFF;
-  padding: 0 10px 10px 0;
   border-radius: 5px;
+  box-shadow: 0px 1px 5px #eae8e8;
+  border: 0px 1px 1px #eae8e8;
+  transition: all 0.3s ease-in-out;
 }
 
-.data-options a {
+
+/* .data-options a, .sub-opt a { 
+  background: #FFFFFF;
+} */
+
+/* .data-selector {
+  display: flex;
+  background-color: #FFFFFF;
+  transition: all 0.5s ease;
+  justify-content: space-between;
+} */
+
+.data-options a, .sub-opt a {
   color: #999999;
   text-decoration: none;
-  display: flex;
-  flex-direction: column;
-  margin: 4px 0;
+  margin: 0 0 4px 0;
   transition: all 0.5s ease;
 }
 
-.data-options a:hover {
-  color:black;
-  text-decoration: none;
-}
-
-.data-selector {
-  transition: all 0.5s ease;
-}
-
-.data-selector:hover .data-options {
-  display: flex;
-  flex-direction: column;
-  cursor: pointer;
-}
-
+.data-options a:hover, 
+.sub-opt a:hover,
 .select:hover {
-  cursor: pointer;
   color: #000000;
-}
-
-
-
-.sub-opt {
-  margin-left: 4px;
-  z-index: 1;
-  min-width: 200px;
-  position: absolute;
-  background: none;
-  display: none;
-  background: #FFFFFF;
-  border-radius: 5px;
-  padding: 0 10px 10px 0;
-}
-
-.sub-opt a {
-  color: #999999;
   text-decoration: none;
-  display: flex;
-  flex-direction: column;
-  margin: 4px 0;
-  transition: all 0.5s ease;
+  cursor: pointer;
 }
 
-.sub-opt a:hover {
-  color:black;
-  text-decoration: none;
-}
 
+.data-selector:hover .data-options,
 .data-selector:hover .sub-opt {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   cursor: pointer;
 }
 

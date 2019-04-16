@@ -1,7 +1,9 @@
-const renderGraph = () => {
-  const selector = parseInt(document.getElementById("graph").innerHTML);
+const renderGraph = dataSet => {
 
-  let data = parseData(s2017, selector);
+  selectedDataSet = dataSet ? dataSets[dataSet] : s2017;
+
+  const selector = parseInt(document.getElementById("graph").innerHTML);
+  let data = parseData(selectedDataSet, selector);
 
   const color = d3.scaleOrdinal(d3.quantize(d3.interpolateRainbow, data.children.length));
 
@@ -30,15 +32,27 @@ const renderGraph = () => {
 
   const selectSubCat = segment => {
     const innerData = segment.__data__;
-    let subCat;
+    let subData;
+    let subCat = {
+      cat: null,
+      val: null
+    };
     if (innerData.depth === 1) {
-      subCat = innerData.data.category
+      subData = innerData
+      subCat.cat = subData.data.category
+      subCat.val = subData.parent.value
     } else if (innerData.depth === 2) {
-      subCat = innerData.parent.data.category
+      subData = innerData.parent
+      subCat.cat = subData.data.category
+      subCat.val = subData.parent.value
     } else if (innerData.depth === 3) {
-      subCat = innerData.parent.parent.data.category
+      subData = innerData.parent.parent
+      subCat.cat = subData.data.category
+      subCat.val = subData.parent.value
     } else if (innerData.depth === 4) {
-      subCat = innerData.parent.parent.parent.data.category
+      subData = innerData.parent.parent.parent
+      subCat.cat = subData.data.category
+      subCat.val = subData.parent.value
     }
     return subCat
   }
@@ -47,29 +61,36 @@ const renderGraph = () => {
     const innerData = segment.__data__;
     const category = innerData.data.category;
     const color = segment.style.fill;
-    const subCat = selectSubCat(segment);
-    
-    const sub = document.getElementById(`${subCat}`);
-    
+    const {cat, val} = selectSubCat(segment);
+    const sub = document.getElementById(`${cat}`);
+    const percent = Math.floor(100 * (innerData.value/val));
+    let portion = percent > 1 ? `% ${percent}` : '% < 1';
+
+
     sub.style.color = `${color}`;
     sub.style.fontWeight = '900'
-    document.getElementById(`${subCat}-val`).style.color = `${color}`;
+    document.getElementById(`${cat}-val`).style.color = `${color}`;
     document.getElementById('sub-cat').innerHTML = `${category}`;
     document.getElementById('sub-val').innerHTML = `${currency.format(innerData.value)}`;
     document.getElementById('sub-val').style.borderColor = `${color}`;
+    document.getElementById('sub-percent').innerHTML = portion;
+    document.getElementById('sub-percent').style.borderColor = `${color}`;
   }
 
-  const revertSubtotal = segment => {
-    const subCat = selectSubCat(segment)
-    const sub = document.getElementById(`${subCat}`);
+  const revertSubtotal = (segment) => {
+    const {cat, val} = selectSubCat(segment)
+    const sub = document.getElementById(`${cat}`);
 
     sub.style.color = '#999999';
     sub.style.fontWeight = '400';
-    document.getElementById(`${subCat}-val`).style.color = '#000000';
+    document.getElementById(`${cat}-val`).style.color = '#000000';
     document.getElementById('sub-cat').innerHTML = "Segment_";
     document.getElementById('sub-val').innerHTML = "$0.00";
     document.getElementById('sub-val').style.borderColor = '#000000';
+    document.getElementById('sub-percent').innerHTML = '% 0';
+    document.getElementById('sub-percent').style.borderColor = '#000000';
   }
+  
   const colors = [];
 
   graph.selectAll('path')
