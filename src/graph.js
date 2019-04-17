@@ -3,6 +3,7 @@ const renderGraph = dataSet => {
   let selectedDataSet = dataSet ? dataSets[dataSet] : s2017;
   const selector = parseInt(document.getElementById("graph").innerHTML);
   const data = parseData(selectedDataSet, selector);
+
   const colors = [];
   const color = d3.scaleOrdinal(d3.quantize(d3.interpolateRainbow, data.children.length));
   const dia = 500;
