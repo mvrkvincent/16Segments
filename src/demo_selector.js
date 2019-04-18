@@ -1,7 +1,7 @@
-const age = `<a onClick="changeDemo('age')">Age Group_</a>`;
-const size = `<a onClick="changeDemo('size')">Household Size_</a>`;
-const income = `<a onClick="changeDemo('income')">Income Level_</a>`;
-const metro = `<a onClick="changeDemo('metro')">Metro Area_</a>`;
+const age = `<a onClick="changeDemo('age')">Age Group</a>`;
+const size = `<a onClick="changeDemo('size')">Household Size</a>`;
+const income = `<a onClick="changeDemo('income')">Income Level</a>`;
+const metro = `<a onClick="changeDemo('metro')">Metro Area</a>`;
 const national = `<a onClick="changeDemo('national')">National Average</a>`;
 
 document.getElementById("demoSelector").innerHTML =
