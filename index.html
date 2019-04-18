@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="assets/stylesheets/_css_reset.css">
   <link rel="stylesheet" href="assets/stylesheets/application.css">
   <script src="https://d3js.org/d3.v4.min.js"></script>
-  <link rel='shortcut icon' type='image/x-icon' href='/assets/16S.png' />
+  <link rel='shortcut icon' type='image/x-icon' href='/assets/16S_icon.png' />
   <title>16|Segments</title>
 </head>
 <body>
@@ -18,26 +18,42 @@
   <div class="content">
     <div class="main" onClick="enter()">
       <div id="title" >
+        <div class="name">
         <div>16  |  Segments  |</div>
         <span>A Consumer Spending Visualization_</span>
+        </div>
+        <div id="about" class="">
+          <a href="mailto:mrkxvncnt@gmail.com"><i class="far fa-envelope"></i></a>
+          <a href="https://github.com/mrkvncnt"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/mark-rodriguez-a39934163/"><i class="fab fa-linkedin"></i></a>
+        </div>
       </div>
     <div id="top-bar" class="top-bar hidden">
 
-      <div id="nav" class="nav"><div class="header" onClick="changeDemo('national')">16  |  Segments  |</div>
+      <div id="nav" class="nav">
+        <div class="header" onClick="changeDemo('national')">16  |  Segments  |</div>
         <div id="demoSelector" class="data-selector"></div>
         <div id="subSelector" class="data-selector"></div>
       </div>
 
-      <div id="about" class="">
-        <a href="mailto:mrkxvncnt@gmail.com"><i class="far fa-envelope"></i></a>
-        <a href="https://github.com/mrkvncnt"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/mark-rodriguez-a39934163/"><i class="fab fa-linkedin"></i></a>
-      </div>
-
+                <div class="savings">
+                  <div id="income" class="sub-val">$0.00</div>
+                  <div  class="sub-cat">Average Income</div>
+                </div>
+    
     </div>
+
+    <div id="spending">
+
+  
+    </div>
+
     
     <div id="app" class="app centered">
       <div id="ledger" class="ledger hidden">
+  
+
+
         <div id="ledger-wrapper">
         <div class="annual">
           <div id="total" ></div>
@@ -45,15 +61,29 @@
         </div>
         <div id="ledger-items" class=""></div>
         </div>
-      </div>
-      <div class="visualizer">
-          <div id="sub-total" class="sub-total hidden">
 
-            <div id="sub-val">$0.00</div>
-            <div id="sub-percent">% 0</div>
-            <div id="sub-cat">Segment</div>
-
+          <div class="savings">
+            <div id="savings" class="sub-val">$0.00</div>
+            <div class="sub-cat">Discresionary Income</div>
           </div>
+
+
+
+      </div>
+
+
+
+
+      <div class="visualizer">
+
+            <div id="sub-total" class="sub-total hidden">
+            
+              <div id="sub-val" class="sub-val">$0.00</div>
+              <div id="sub-percent">% 0</div>
+              <div id="sub-cat" class="sub-cat">Segment</div>
+            
+            </div>
+     
           <svg id="graph" class="graph">1</svg>
       </div>
       </div>

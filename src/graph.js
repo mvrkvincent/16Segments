@@ -1,6 +1,7 @@
-const renderGraph = dataSet => {
+const renderGraph = ( dataSet, catIncome ) => {
 
   let selectedDataSet = dataSet ? dataSets[dataSet] : s2017;
+  let selectedIncome = catIncome ? catIncome : sIncome2017[0]
   const selector = parseInt(document.getElementById("graph").innerHTML);
   const data = parseData(selectedDataSet, selector);
 
@@ -113,6 +114,6 @@ const renderGraph = dataSet => {
       }
     })
 
-  buildLedger(root, colors);
-
+  buildLedger(root, colors, selectedIncome);
+    
 }

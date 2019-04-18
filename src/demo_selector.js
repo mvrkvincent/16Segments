@@ -36,6 +36,7 @@ const changeDemo = dataType => {
     document.getElementById("sub").innerHTML = null;
     document.getElementById("opt2").innerHTML = null;
     document.getElementById("graph").innerHTML = 1;
+    document.getElementById("income").innerHTML = currency.format(sIncome2017[0]);
     renderGraph();
   }
 
