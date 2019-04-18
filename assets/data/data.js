@@ -37,7 +37,7 @@ const s2017 = [
 const metro2017 = [
 
   ["Metro Area",
-    "Food", "Groceries", "Bread & Grain", "Meat",  "Dairy", "Produce","Other Food", "Restaurants", "***",
+    "Food", "Groceries", "Bread & Grain", "Meat",  "Dairy", "Produce","Other Food", "**", "Restaurants", "***",
     "Alcohol", "***",
     "Housing", "Shelter", "Utilities & Services", "Household Operations", "Housekeeping Supplies", "Household Furnishings & Appliances", "***",
     "Apparel", "***",

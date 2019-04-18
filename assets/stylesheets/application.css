@@ -19,6 +19,8 @@
   max-width: 1060px;
 }
 
+
+
 #top-bar {
   width: 100%;
   display: flex;
@@ -72,6 +74,11 @@
 #title span {
   margin-left: 5px;
   color: #999999;
+  transition: all 0.3s ease;
+}
+
+#title span:hover {
+  color: #000000;
 }
 
 #nav {

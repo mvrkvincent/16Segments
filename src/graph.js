@@ -82,7 +82,7 @@ const renderGraph = dataSet => {
     sub.style.color = '#999999';
     sub.style.fontWeight = '400';
     document.getElementById(`${cat}-val`).style.color = '#000000';
-    document.getElementById('sub-cat').innerHTML = "Segment_";
+    document.getElementById('sub-cat').innerHTML = "Segment";
     document.getElementById('sub-val').innerHTML = "$0.00";
     document.getElementById('sub-val').style.borderColor = '#000000';
     document.getElementById('sub-percent').innerHTML = '% 0';
