@@ -24,7 +24,7 @@ const createOptionsList = (dataSet,dataType) => {
 
 const assignOptions = (dataSet, dataType) => {
 
-  document.getElementById("sub").innerHTML = `Select_`;
+  document.getElementById("sub").innerHTML = `Demographic<i class="fas fa-chevron-down">`;
   oList = createOptionsList(dataSet, dataType).slice(',').join('');
 
   options.innerHTML = oList;
