@@ -116,7 +116,11 @@
 }
 
 .header {
+  display: flex;
+  flex-direction: row;
   cursor: pointer;
+  border-right: 2px solid #000000;
+  padding-right: 10px;
 }
 
 .visualizer {
@@ -281,6 +285,10 @@
   min-width: 125px;
   max-width: 300px;
   overflow: auto;
+}
+
+#demoSelector {
+  margin-left: 6px;
 }
 
 .footer {
