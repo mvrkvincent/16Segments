@@ -16,9 +16,9 @@
 <body>
   
   <div class="content">
-    <div class="main" onClick="enter()">
+    <div class="main" >
       <div id="title" >
-        <div class="name">
+        <div class="name" onClick="enter()">
         <div class="header">16 | Segments</div>
         <span>A Consumer Spending Visualization</i></span>
         </div>
@@ -43,12 +43,6 @@
     
     </div>
 
-    <div id="spending">
-
-  
-    </div>
-
-    
     <div id="app" class="app centered">
       <div id="ledger" class="ledger hidden">
   
@@ -67,12 +61,7 @@
             <div class="sub-cat">Discretionary Income</div>
           </div>
 
-
-
       </div>
-
-
-
 
       <div class="visualizer">
 
@@ -84,8 +73,10 @@
             
             </div>
      
-          <svg id="graph" class="graph">1</svg>
+          <svg id="graph" class="graph" onClick="enter()">1</svg>
+
       </div>
+      
       </div>
       <div class="footer">
         <span>Source: Consumer Expenditure Survey, U.S. Bureau of Labor Statistics, September, 2018 | Mean values represented</span>
