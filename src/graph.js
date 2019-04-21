@@ -31,28 +31,23 @@ const renderGraph = ( dataSet, catIncome ) => {
 
   const selectSubCat = segment => {
     const innerData = segment.__data__;
-    let subData;
+    let subData = innerData;
     let subCat = {
       cat: null,
       val: null
     };
+
     if (innerData.depth === 1) {
       subData = innerData
-      subCat.cat = subData.data.category
-      subCat.val = subData.parent.value
     } else if (innerData.depth === 2) {
       subData = innerData.parent
-      subCat.cat = subData.data.category
-      subCat.val = subData.parent.value
     } else if (innerData.depth === 3) {
       subData = innerData.parent.parent
-      subCat.cat = subData.data.category
-      subCat.val = subData.parent.value
     } else if (innerData.depth === 4) {
       subData = innerData.parent.parent.parent
-      subCat.cat = subData.data.category
-      subCat.val = subData.parent.value
     }
+    subCat.cat = subData.data.category
+    subCat.val = subData.parent.value
     return subCat
   }
 
@@ -113,6 +108,7 @@ const renderGraph = ( dataSet, catIncome ) => {
         return color(d.parent.parent.parent.data.category)
       }
     })
+    
 
   buildLedger(root, colors, selectedIncome);
     
