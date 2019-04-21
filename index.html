@@ -18,26 +18,27 @@
   <div class="content">
     <div class="main" >
       <div id="title" >
-        <div class="name" onClick="enter()">
-        <div class="header">16 | Segments</div>
-        <span>A Consumer Spending Visualization</i></span>
+
+        <div id="name" class="name" onClick="enter()">
+
+          <div class="header" onClick="changeDemo('national')">16 | Segments</div>
+
+          <div id="nav" class="nav hidden">
+            <div id="demoSelector" class="data-selector"></div>
+            <div id="subSelector" class="data-selector"></div>
+          </div>
+
+          <span id="tag-line">A Consumer Spending Visualization</i></span>
+          
         </div>
+
         <div id="about" class="">
           <a href="mailto:mrkxvncnt@gmail.com"><i class="far fa-envelope"></i></a>
           <a href="https://github.com/mrkvncnt"><i class="fab fa-github"></i></a>
           <a href="https://www.linkedin.com/in/mark-vincent-rodriguez-a39934163/"><i class="fab fa-linkedin"></i></a>
         </div>
-      </div>
 
-    <div id="top-bar" class="top-bar hidden">
-
-      <div id="nav" class="nav">
-        <div class="header" onClick="changeDemo('national')">16  |  Segments</div>
-        <div id="demoSelector" class="data-selector"></div>
-        <div id="subSelector" class="data-selector"></div>
       </div>
-    
-    </div>
 
     <div id="app" class="app centered">
       <div id="ledger" class="ledger hidden">

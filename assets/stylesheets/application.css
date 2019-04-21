@@ -87,7 +87,7 @@
 }
 
 #title span {
-  margin-left: 10px;
+  padding-left: 10px;
   color: #999999;
   transition: all 0.3s ease;
 }
@@ -181,7 +181,6 @@
   height: 100%;
   text-align: left;
   overflow: hidden;
-  padding-bottom: 10px;
 }
 
 #total {
@@ -230,7 +229,6 @@
 #icon {
   margin-right: 5px;
 }
-
 
 .value {
   display: flex;
