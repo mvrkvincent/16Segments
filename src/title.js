@@ -1,5 +1,7 @@
 const enter = () => {
   document.getElementById("tag-line").classList.add('hidden');
+  document.getElementById("enter-r").classList.add('hidden');
+  document.getElementById("enter-l").classList.add('hidden');
   document.getElementById("app").classList.remove('centered')
   document.getElementById("ledger").classList.remove('hidden');
   document.getElementById("nav").classList.remove('hidden');
