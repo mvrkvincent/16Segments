@@ -5,14 +5,14 @@
 Each year, the United States Bureau of Labor and Statistics (BLS) publishes data from the Consumer Expenditure Survey (CE) covering a range of consumer expenses as well as household income. This data reflects the spending habbits of millions of Americans and can be used to guage the relative importance of various goods and services. 16Segments highlights the major segments of American spending with a special focus on specific demographics and metropolitain areas.  
 
 ### Functionality & MVP  
-16|Segments usurs will be able to:
+16|Segments users are able to:
 
 - [ ] See a broad overview of major American expenses by major category
 - [ ] Refine spending by age and income demographics
 - [ ] Toggle data between major metropolitain statistical areas
 - [ ] View expenses as list and chart 
 
-In addition, this project will include:
+In addition, this project contains:
 
 - [ ] An informational modal describing the CE methodology with links to raw data
 - [ ] A production README
