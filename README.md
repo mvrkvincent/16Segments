@@ -44,7 +44,7 @@ In addition to the entry file:
 ### Design
 
 
-
+![16S_design](https://github.com/mrkvncnt/16Segments/blob/master/assets/16S.jpg)
 
 ### Bonus Features
 
