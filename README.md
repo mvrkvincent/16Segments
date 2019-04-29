@@ -27,6 +27,11 @@ This visualization consists of a single screen<sub>(a)</sub> containing a primar
 
 ![16S_wireframe](https://github.com/mrkvncnt/Toast/blob/master/assets/16S_wireframe.jpg)
 
+
+### Design
+
+![16S_design](https://github.com/mrkvncnt/16Segments/blob/master/assets/16S.jpg)
+
 ### Architecture & Technologies
 
 16Segments is built with:
@@ -39,12 +44,6 @@ In addition to the entry file:
 
 - `parse.js` handles retrieval and computation of data
 - `chart.js` handles the logic for rendering visualizations
-
-
-### Design
-
-
-![16S_design](https://github.com/mrkvncnt/16Segments/blob/master/assets/16S.jpg)
 
 ### Bonus Features
 
