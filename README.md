@@ -30,6 +30,7 @@ This visualization consists of a single screen<sub>(a)</sub> containing a primar
 
 ### Design
 
+Colors change dynamically based on percentage of spending allocated to each budget segment. On hover, ledged highlights with corresponding color and detailed breakdown appears above graph.
 ![16S_design](https://github.com/mrkvncnt/16Segments/blob/master/assets/16S.jpg)
 
 ### Architecture & Technologies
