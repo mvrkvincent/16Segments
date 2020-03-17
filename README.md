@@ -1,6 +1,6 @@
 ## 16|Segments: A Consumer Spending Visualization
 
-### Overview
+### Overview | [Live](https://markvincent.dev/16Segments)
 
 Each year, the United States Bureau of Labor and Statistics (BLS) publishes data from the Consumer Expenditure Survey (CE) covering a range of consumer expenses as well as household income. This data reflects the spending habbits of millions of Americans and can be used to guage the relative importance of various goods and services. 16Segments highlights the major segments of American spending with a special focus on specific demographics and metropolitain areas.  
 
@@ -27,6 +27,12 @@ This visualization consists of a single screen<sub>(a)</sub> containing a primar
 
 ![16S_wireframe](https://github.com/mrkvncnt/Toast/blob/master/assets/16S_wireframe.jpg)
 
+
+### Design
+
+Colors change dynamically based on percentage of spending allocated to each budget segment. On hover, ledged highlights with corresponding color and detailed breakdown appears above graph.
+![16S_design](https://github.com/mrkvncnt/16Segments/blob/master/assets/16S.jpg)
+
 ### Architecture & Technologies
 
 16Segments is built with:
@@ -39,12 +45,6 @@ In addition to the entry file:
 
 - `parse.js` handles retrieval and computation of data
 - `chart.js` handles the logic for rendering visualizations
-
-
-### Design
-
-
-
 
 ### Bonus Features
 
