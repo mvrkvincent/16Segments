@@ -16,22 +16,17 @@
 <body>
   
   <div class="content">
-    <div class="main" >
-      <div id="title" >
 
-        <div id="name" class="name" onClick="enter()">
+    <div id="app">
 
-          <div class="header" onClick="changeDemo('national')">16 | Segments</div>
-
-          <div id="nav" class="nav hidden">
+      <div id="header">
+        <div id="name" class="name">
+          <div id="title" onClick="changeDemo('national')">16 | Segments</div>
+          <div id="nav" class="nav">
             <div id="demoSelector" class="data-selector"></div>
             <div id="subSelector" class="data-selector"></div>
           </div>
-
-          <span id="tag-line">A Consumer Spending Visualization</i></span>
-
         </div>
-
         <div id="about" class="">
           <a href="mailto:connect@markvincent.dev"><i class="far fa-envelope"></i></a>
           <a href="https://angel.co/mark-vincent-rodriguez"><i class="fab fa-angellist"></i></a>
@@ -39,17 +34,27 @@
           <a href="https://www.linkedin.com/in/markvincentrodriguez/"><i class="fab fa-linkedin"></i></a>
           <a href="https://markvincent.dev/"><i class="fas fa-globe"></i></a>
         </div>
-
       </div>
-
-    <div id="app" class="app centered">
-      <span id="enter-l" class="enter">click graph to enter</span>
-      <div id="ledger" class="ledger hidden">
-
+      
+      <div class="sub-header"> 
+        
         <div class="savings">
           <div id="income" class="sub-val">$0.00</div>
           <div class="sub-cat">Pre-Tax Income</div>
         </div>
+        
+        <div class="savings">
+          <div id="sub-val" class="sub-val">$0.00</div>
+          <div id="sub-percent">% 0</div>
+          <div id="sub-cat" class="sub-cat">Segment</div>
+        </div>
+
+      </div>
+
+    <div id="segments">
+      
+      <div id="ledger" class="ledger">
+      
   
         <div id="ledger-wrapper">
 
@@ -62,28 +67,23 @@
 
         </div>
 
-          <div class="savings">
-            <div id="savings" class="sub-val">$0.00</div>
-            <div class="sub-cat">Discretionary Income</div>
-          </div>
       </div>
 
       <div class="visualizer">
-      
-          <div id="sub-total" class="sub-total hidden">
-          
-            <div id="sub-val" class="sub-val">$0.00</div>
-            <div id="sub-percent">% 0</div>
-            <div id="sub-cat" class="sub-cat">Segment</div>
-          
+          <div id="float">
+            <svg id="graph" class="graph">1</svg>
           </div>
-        <div class="float">
-          <svg id="graph" class="graph" onClick="enter()">1</svg>
-        </div>
-
-        </div>
-        <span id="enter-r" class="enter">click graph to enter</span>
       </div>
+
+      </div>
+
+      <div class="sub-header">
+        <div class="savings">
+          <div id="savings" class="sub-val">$0.00</div>
+          <div class="sub-cat">Discretionary Income</div>
+        </div>
+      </div>
+      
       <div class="footer">
         <span>Source: Consumer Expenditure Survey, U.S. Bureau of Labor Statistics, September, 2018 | Mean values represented</span>
         <span><i class="far fa-copyright"></i> mark vincent rodriguez | 2019</span>

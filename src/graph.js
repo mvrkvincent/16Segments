@@ -7,7 +7,7 @@ const renderGraph = ( dataSet, catIncome ) => {
 
   const colors = [];
   const color = d3.scaleOrdinal(d3.quantize(d3.interpolateRainbow, data.children.length));
-  const dia = 500;
+  const dia = 300;
   const rad = dia / 2;
   const partition = d3.partition().size([2 * Math.PI, rad]);
 
