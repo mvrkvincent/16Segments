@@ -1,7 +1,7 @@
 const renderGraph = ( dataSet, catIncome ) => {
 
   let selectedDataSet = dataSet ? dataSets[dataSet] : s2017;
-  let selectedIncome = catIncome ? catIncome : sIncome2017[0]
+  let selectedIncome = catIncome ? catIncome : sIncome2017[0];
   const selector = parseInt(document.getElementById("graph").innerHTML);
   const data = parseData(selectedDataSet, selector);
 
@@ -83,7 +83,7 @@ const renderGraph = ( dataSet, catIncome ) => {
     document.getElementById('sub-val').style.borderColor = '#000000';
     document.getElementById('sub-percent').innerHTML = '% 0';
     document.getElementById('sub-percent').style.borderColor = '#000000';
-  }
+  };
 
   graph.selectAll('path')
     .data(root.descendants())
@@ -98,16 +98,16 @@ const renderGraph = ( dataSet, catIncome ) => {
     .on("mouseout", function () { d3.select(this).style('fill-opacity', 0.8), revertSubtotal(this) }) 
     .style('fill', d => { 
       if ( d.depth === 1 ) {
-        colors.push(color(d.data.category))
-        return color(d.data.category)
+        colors.push(color(d.data.category));
+        return color(d.data.category);
       } else if (d.depth === 2) {
-        return color(d.parent.data.category)
+        return color(d.parent.data.category);
       } else if (d.depth === 3){
-        return color(d.parent.parent.data.category)
+        return color(d.parent.parent.data.category);
       } else if (d.depth === 4) {
-        return color(d.parent.parent.parent.data.category)
+        return color(d.parent.parent.parent.data.category);
       }
-    })
+    });
     
 
   buildLedger(root, colors, selectedIncome);

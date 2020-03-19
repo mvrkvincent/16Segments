@@ -6,21 +6,21 @@ const metroArea = [metro2017.map((cat, i) => [cat[0], i]).slice(1), metroIncome2
 
 document.getElementById("subSelector").innerHTML =
 `<button id="sub" class="select"></button>
-<div id="opt2" class="sub-opt"></div>`
+<div id="opt2" class="sub-opt"></div>`;
 
-const options = document.getElementById('opt2')
-const avgIncome = document.getElementById('income')
+const options = document.getElementById('opt2');
+const avgIncome = document.getElementById('income');
 
 const createOptionsList = (dataSet,dataType) => {
-  optionsList = []
-  catOptions = dataType[0]
-  incomeOptions = dataType[1]
+  optionsList = [];
+  catOptions = dataType[0];
+  incomeOptions = dataType[1];
   for (let i=0; i < catOptions.length; i++ ) {
 
     optionsList.push(`<a onClick="selectData('${catOptions[i]},${dataSet},${incomeOptions[i]}')">${catOptions[i][0]}</a>`);
   }
   return optionsList;
-}
+};
 
 const assignOptions = (dataSet, dataType) => {
 
@@ -28,7 +28,7 @@ const assignOptions = (dataSet, dataType) => {
   oList = createOptionsList(dataSet, dataType).slice(',').join('');
 
   options.innerHTML = oList;
-}
+};
 
 const selectData = selection => {
   selection = selection.split(",");
@@ -42,4 +42,4 @@ const selectData = selection => {
   document.getElementById("graph").innerHTML = dataIndex;
   
   renderGraph(dataSet, catIncome);
-}
+};
