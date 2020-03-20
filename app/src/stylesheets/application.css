@@ -144,12 +144,17 @@
 }
 
 #sub-percent {
-  border-right: 2px solid #000000;
+  border-right: 1px solid #000000;
   color: #999999;
   width: 60px;
   text-align: center;
 }
 
+#sub {
+  border-left: 2px solid #999999;
+  padding: 0 10px;
+  /* margin-left: 4px; */
+}
 #ledger-wrapper {
   min-width: 555px;
   display: flex;
@@ -226,7 +231,7 @@
   border: none;
   font: inherit;
   outline: none;
-  margin-left: 4px;
+  /* margin-left: 4px; */
   padding: 0;
   transition: all 0.5s ease;
 }
@@ -270,8 +275,12 @@
   overflow: auto;
 }
 
+#demographic {
+  padding: 0 10px;
+}
+
 #demoSelector {
-  margin-left: 6px;
+  /* margin: 0 6px; */
 }
 
 .footer {

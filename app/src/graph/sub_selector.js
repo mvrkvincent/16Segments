@@ -19,7 +19,7 @@ export const SubDemoSelectors = props => {
       let subDemoIncome = subDemoIncomes[i];
       list.push(<a key={i} onClick={() => selectData({subDemo, subDemoDataIndex, subDemoIncome})}>{subDemo}</a>);
     }
-    setSelectedSubDemo('| Demographic');
+    setSelectedSubDemo('Demographic');
     return setSubDemoSelectors(list);
   };
 
@@ -50,6 +50,7 @@ export const SubDemoSelectors = props => {
 
   const selectData = ({ subDemo, subDemoDataIndex, subDemoIncome }) => {
     setSelectedSubDemo(subDemo)
+    document.getElementById("graph").innerHTML = subDemoDataIndex;
     renderGraph({ dataSet, subDemoDataIndex, subDemoIncome});
   };
 

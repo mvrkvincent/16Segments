@@ -7,7 +7,8 @@ import { s2017, sIncome2017 } from '../data/data';
 export const renderGraph = props => {
   let selectedDataSet = props ? props.dataSet : s2017;
   let selectedIncome = props ? props.subDemoIncome : sIncome2017[0];
-  const dataSelector = props ? props.subDemoDataIndex : 1;
+  // const dataSelector = props ? props.subDemoDataIndex : 1;
+  const dataSelector = parseInt(document.getElementById("graph").innerHTML);
   const data = parseData(selectedDataSet, dataSelector);
 
   const colors = [];

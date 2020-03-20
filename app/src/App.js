@@ -45,7 +45,7 @@ const App = () => {
 
           <div class="visualizer">
             <div id="float">
-              <svg id="graph" class="graph"></svg>
+              <svg id="graph" class="graph">1</svg>
             </div>
           </div>
 
