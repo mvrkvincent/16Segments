@@ -31,7 +31,7 @@ const Nav = () => {
         <a href="https://angel.co/mark-vincent-rodriguez"><i class="fab fa-angellist"></i></a>
         <a href="https://github.com/mrkvncnt"><i class="fab fa-github"></i></a>
         <a href="https://www.linkedin.com/in/markvincentrodriguez/"><i class="fab fa-linkedin"></i></a>
-        <a href="https://markvincent.dev/"><i class="fas fa-globe"></i></a>
+        <a href="https://mvrk.dev/"><i class="fas fa-globe"></i></a>
       </div>
     </div>
 
