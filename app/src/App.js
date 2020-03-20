@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import './stylesheets/_css_reset.css';
 import './stylesheets/application.css';
 import Nav from './components/nav';
