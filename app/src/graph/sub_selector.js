@@ -55,7 +55,6 @@ export const SubDemoSelectors = props => {
 
 
   useEffect(() => {
-    
     generateSubDemoData();
   }, [props.demo]);
 
@@ -71,20 +70,6 @@ export const SubDemoSelectors = props => {
   )
 };
 
-// const selectData = selection => {
-//   selection = selection.split(",");
-
-//   const header = selection.slice(0, selection.length - 3).join(",");
-//   const dataIndex = selection.slice(selection.length - 3, selection.length - 2);
-//   const dataSet = selection.slice(selection.length - 2, selection.length - 1);
-//   const catIncome = selection.slice(selection.length - 1)
-
-
-//   document.getElementById("sub").innerHTML = header;
-//   document.getElementById("graph").innerHTML = dataIndex;
-
-//   renderGraph(dataSet, catIncome);
-// };
 
 
 

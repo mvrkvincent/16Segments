@@ -1,8 +1,6 @@
 import React, {useEffect} from 'react';
-import { changeDemo } from './graph/demo_selector';
 import './stylesheets/_css_reset.css';
 import './stylesheets/application.css';
-import {renderGraph} from './graph/graph';
 import Nav from './components/nav';
 
 const App = () => {
