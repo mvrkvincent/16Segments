@@ -1,0 +1,286 @@
+#app {
+  width: 80vw;
+  align-self: center;
+}
+
+#header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 24px;
+  line-height: 30px;
+  overflow: auto;
+  cursor: pointer;
+  margin-bottom: 20px
+}
+
+#name {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+#title {
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+  border-right: 2px solid #000000;
+  padding-right: 10px;
+}
+
+#title span {
+  padding-left: 10px;
+  color: #999999;
+  transition: all 0.3s ease;
+}
+
+#title span:hover {
+  color: #000000;
+}
+
+#nav {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  font-size: 24px;
+  text-align: left;
+}
+
+#about {
+  display: flex;
+  flex-direction: row;
+  height: 24px;
+}
+
+#about a {
+  font-size: 20px;
+  color: #999999;
+  text-decoration: none;
+  align-content: center;
+  margin: 0 10px;
+  transition: all 0.5s ease;
+}
+
+#about a:hover {
+  color: #000000;
+}
+
+#segments {
+  display: flex;
+  align-items: center;
+}
+
+.sub-header {
+  display: flex;
+  flex-direction: row;
+}
+
+.sub-header-value {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.sub-header-value 
+.sub-val {
+  width: 146px;
+}
+
+#percentage {
+  margin-left: 100px;
+}
+
+#spending {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 16px;
+  width: 100%;
+  align-items: center;
+}
+
+.select i {
+  font-size: 12px;
+  margin-left: 4px;
+  align-self: flex-end;
+}
+
+.visualizer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+
+#float {
+  display: flex;
+  justify-content: center;
+}
+
+.graph {
+  cursor: pointer;
+}
+
+.sub-total {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+}
+
+.sub-val {
+  border-right: 2px solid #000000;
+  text-align: right;
+  padding-right: 20px;
+  width: 60px;
+}
+
+.sub-cat {
+  padding-left: 20px;
+  color: #999999;
+}
+
+#sub-percent {
+  border-right: 2px solid #000000;
+  color: #999999;
+  width: 60px;
+  text-align: center;
+}
+
+#ledger-wrapper {
+  min-width: 555px;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  font-size: 18px;
+  height: 100%;
+  text-align: left;
+  /* overflow: hidden; */
+}
+
+#total {
+  text-align: right;
+  width: 100%;
+  height: 100%;
+  font-size: 22px;
+  font-weight: 900;
+  padding-bottom:10px;
+}
+
+.annual {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  padding-right: 20px;
+  width: 146px;
+}
+
+.annual-total {
+  text-align: right;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 100;
+  color: #999999;
+}
+
+#ledger-items {
+  border-left: 2px solid #000000;
+}
+
+
+.ledger-item {
+  color: #999999;
+  margin: 10px 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.ledger span {
+  padding-left: 20px;
+  transition: all 0.3s ease;
+}
+
+#icon {
+  margin-right: 5px;
+}
+
+.value {
+  display: flex;
+  justify-content: center;
+  width: 60px;
+  padding: 0 20px;
+  text-align: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  color: #000000;
+  border-right: 2px solid #000000;
+}
+
+.select {
+  color: #999999;
+  border: none;
+  font: inherit;
+  outline: none;
+  margin-left: 4px;
+  padding: 0;
+  transition: all 0.5s ease;
+}
+
+.data-options, 
+.sub-opt {
+  display: none;
+  z-index: 1;
+  position: absolute;
+  background: #FFFFFF;
+  border-radius: 5px;
+  box-shadow: 0 1px 5px #eae8e8;
+  border: 0 1px 1px #eae8e8;
+  transition: all 0.3s ease-in-out;
+}
+
+.data-options a, 
+.sub-opt a {
+  color: #999999;
+  text-decoration: none;
+  margin: 5px;
+  transition: all 0.5s ease;
+}
+
+.data-options a:hover, 
+.sub-opt a:hover,
+.select:hover {
+  color: #000000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+.data-selector:hover .data-options,
+.data-selector:hover .sub-opt {
+  display: flex;
+  flex-direction: column;
+  max-height: 300px;
+  min-width: 125px;
+  max-width: 300px;
+  overflow: auto;
+}
+
+#demoSelector {
+  margin-left: 6px;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  color: #999999;
+  font-size: 10px;
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: 1px solid lightgrey;
+}

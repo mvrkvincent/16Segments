@@ -1,25 +1,71 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useEffect} from 'react';
+import { changeDemo } from './graph/demo_selector';
+import './stylesheets/_css_reset.css';
+import './stylesheets/application.css';
+import {renderGraph} from './graph/graph';
+import Nav from './components/nav';
 
-function App() {
+const App = () => {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div id="app">
+
+        <Nav />
+
+        <div class="sub-header">
+
+          <div class="sub-header-value">
+            <div id="income" class="sub-val">$0.00</div>
+            <div class="sub-cat">Pre-Tax Income</div>
+          </div>
+
+          <div id="percentage" class="sub-header-value">
+            <div id="sub-val" class="sub-val">$0.00</div>
+            <div id="sub-percent">% 0</div>
+            <div id="sub-cat" class="sub-cat">Segment</div>
+          </div>
+
+        </div>
+
+        <div id="segments">
+
+          <div id="ledger" class="ledger">
+
+
+            <div id="ledger-wrapper">
+
+              <div class="annual">
+                <div id="total" ></div>
+                <div class="annual-total" >annual expenses</div>
+              </div>
+
+              <div id="ledger-items" class=""></div>
+
+            </div>
+
+          </div>
+
+          <div class="visualizer">
+            <div id="float">
+              <svg id="graph" class="graph"></svg>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="sub-header">
+          <div class="sub-header-value">
+            <div id="savings" class="sub-val">$0.00</div>
+            <div class="sub-cat">Discretionary Income</div>
+          </div>
+        </div>
+
+        <div class="footer">
+          <span>Source: Consumer Expenditure Survey, U.S. Bureau of Labor Statistics, September, 2018 | Mean values represented</span>
+          <span><i class="far fa-copyright"></i> mark vincent rodriguez | 2019</span>
+        </div>
+      </div>
+
   );
 }
 
