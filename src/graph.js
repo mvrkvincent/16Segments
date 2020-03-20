@@ -38,18 +38,18 @@ const renderGraph = ( dataSet, catIncome ) => {
     };
 
     if (innerData.depth === 1) {
-      subData = innerData
+      subData = innerData;
     } else if (innerData.depth === 2) {
-      subData = innerData.parent
+      subData = innerData.parent;
     } else if (innerData.depth === 3) {
-      subData = innerData.parent.parent
+      subData = innerData.parent.parent;
     } else if (innerData.depth === 4) {
-      subData = innerData.parent.parent.parent
+      subData = innerData.parent.parent.parent;
     }
-    subCat.cat = subData.data.category
-    subCat.val = subData.parent.value
-    return subCat
-  }
+    subCat.cat = subData.data.category;
+    subCat.val = subData.parent.value;
+    return subCat;
+  };
 
   const displaySubTotal = segment => {
     const innerData = segment.__data__;
@@ -62,14 +62,14 @@ const renderGraph = ( dataSet, catIncome ) => {
 
 
     sub.style.color = `${color}`;
-    sub.style.fontWeight = '900'
+    sub.style.fontWeight = '900';
     document.getElementById(`${cat}-val`).style.color = `${color}`;
     document.getElementById('sub-cat').innerHTML = `${category}`;
     document.getElementById('sub-val').innerHTML = `${currency.format(innerData.value)}`;
     document.getElementById('sub-val').style.borderColor = `${color}`;
     document.getElementById('sub-percent').innerHTML = portion;
     document.getElementById('sub-percent').style.borderColor = `${color}`;
-  }
+  };
 
   const revertSubtotal = (segment) => {
     const {cat, val} = selectSubCat(segment)
@@ -112,4 +112,4 @@ const renderGraph = ( dataSet, catIncome ) => {
 
   buildLedger(root, colors, selectedIncome);
     
-}
+};

@@ -10,7 +10,7 @@ document.getElementById("demoSelector").innerHTML =
 
 document.getElementById("demographic").innerHTML = 'National Average<i class="fas fa-chevron-down"/>';
 
-const changeDemo = dataType => {
+export const changeDemo = dataType => {
 
   if (dataType === 'age') {
     document.getElementById("demographic").innerHTML = 'Age Group |';

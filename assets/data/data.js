@@ -93,7 +93,7 @@ const sIncome2017 = [
 120288,
 170234,
 306051
-]
+];
 
 
 const metroIncome2017 = [
@@ -119,6 +119,6 @@ const metroIncome2017 = [
 105790,
 93672,
 96094,
-]
+];
 
 const dataSets = { 's2017': s2017, 'metro2017': metro2017 };
