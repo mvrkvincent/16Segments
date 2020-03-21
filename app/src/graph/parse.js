@@ -1,6 +1,6 @@
 export const parseData = (data, selector) => {
-  
-  const header = data[0];
+  debugger
+  const header = data;
   const parsed = [{ 'category': data[selector][0], 'children': [] }];
   const base = parsed[0];
   let level = 0;

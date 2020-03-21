@@ -9,7 +9,7 @@ export const SubDemoSelectors = props => {
   const dataSet = (props.demo === 'Metro Area' ? metro2017 : s2017);
 
   const generateSubDemoSelectors = (subDemoData) => {
-    
+    debugger
     let selectors = [];
     let subDemos = subDemoData[0];
     let subDemoIncomes = subDemoData[1];
@@ -24,10 +24,9 @@ export const SubDemoSelectors = props => {
   };
 
   const generateSubDemoData = () => {
-    const subSelectors = s2017.map((cat, i) => [cat[0], i]);
-    const householdSize = [subSelectors.slice(2, 7), sIncome2017.slice(1, 6)];
-    const ageGroup = [subSelectors.slice(7, 13), sIncome2017.slice(6, 12)];
-    const incomeLevel = [subSelectors.slice(13, 21), sIncome2017.slice(12, 20)];
+    const householdSize = [dataSet.household_size, sIncome2017.slice(1, 6)];
+    const ageGroup = [dataSet.age_grouo, sIncome2017.slice(6, 12)];
+    const incomeLevel = [dataSet.income_Level, sIncome2017.slice(12, 20)];
     const metroArea = [metro2017.map((cat, i) => [cat[0], i]).slice(1), metroIncome2017];
 
     if (props.demo === 'Age Group') {
