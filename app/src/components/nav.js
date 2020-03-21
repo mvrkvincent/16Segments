@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { demos } from '../data/data';
-import {SubDemoSelectors} from '../graph/sub_selector';
+import {SubDemoSelectors} from './sub_selector';
 
 const Nav = () => {
   const [demo, setDemo] = useState('National Average');
