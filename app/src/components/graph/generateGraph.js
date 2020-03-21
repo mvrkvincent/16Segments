@@ -1,14 +1,14 @@
 import * as d3 from 'd3';
 import { buildLedger } from './ledger';
 import { parseData } from './parse';
-import { displaySubTotal, revertSubtotal } from '../components/interactions';
-import { s2017, sIncome2017 } from '../data/data';
+import { displaySubTotal, revertSubtotal } from './interactions';
+import { s2017, sIncome2017 } from '../../data/data';
 
 export const renderGraph = props => {
   let selectedDataSet = props ? props.dataSet : s2017;
   let selectedIncome = props ? props.subDemoIncome : sIncome2017[0];
-  const dataSelector = parseInt(document.getElementById("graph").innerHTML);
-  const data = parseData(selectedDataSet, dataSelector);
+  const dataIndex = parseInt(document.getElementById("graph").innerHTML);
+  const data = parseData(selectedDataSet, dataIndex);
 
   const colors = [];
   const color = d3.scaleOrdinal(d3.quantize(d3.interpolateRainbow, data.children.length));

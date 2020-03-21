@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './stylesheets/_css_reset.css';
 import './stylesheets/application.css';
-import Nav from './components/nav';
+import Nav from './components/nav/nav';
+import renderGraph from './components/graph/generateGraph';
 
 const App = () => {
 

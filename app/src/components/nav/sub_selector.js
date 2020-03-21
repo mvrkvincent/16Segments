@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { renderGraph } from '../graph/graph';
-import { s2017, sIncome2017, metro2017, metroIncome2017 } from '../data/data';
+import { renderGraph } from '../graph/generateGraph';
+import { s2017, sIncome2017, metro2017, metroIncome2017 } from '../../data/data';
 
 
 export const SubDemoSelectors = props => {
@@ -15,9 +15,9 @@ export const SubDemoSelectors = props => {
     let subDemoIncomes = subDemoData[1];
     for (let i = 0; i < subDemos.length; i++) {
       let subDemo = subDemos[i][0];
-      let subDemoDataIndex = subDemos[i][1];
+      let dataIndex = subDemos[i][1];
       let subDemoIncome = subDemoIncomes[i];
-      selectors.push(<a key={i} onClick={() => selectData({subDemo, subDemoDataIndex, subDemoIncome})}>{subDemo}</a>);
+      selectors.push(<a key={i} onClick={() => selectData({subDemo, dataIndex, subDemoIncome})}>{subDemo}</a>);
     }
     setSelectedSubDemo('Demographic');
     return setSubDemoSelectors(selectors);
@@ -49,10 +49,10 @@ export const SubDemoSelectors = props => {
 
   };
 
-  const selectData = ({ subDemo, subDemoDataIndex, subDemoIncome }) => {
+  const selectData = ({ subDemo, dataIndex, subDemoIncome }) => {
     setSelectedSubDemo(subDemo)
-    document.getElementById("graph").innerHTML = subDemoDataIndex;
-    renderGraph({ dataSet, subDemoDataIndex, subDemoIncome});
+    document.getElementById("graph").innerHTML = dataIndex;
+    renderGraph({ dataSet, dataIndex, subDemoIncome});
   };
 
 

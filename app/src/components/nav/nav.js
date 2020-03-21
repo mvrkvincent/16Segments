@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { demos } from '../data/data';
+import { demos } from '../../data/data';
 import {SubDemoSelectors} from './sub_selector';
 
 const Nav = () => {
