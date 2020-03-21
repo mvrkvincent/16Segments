@@ -1,25 +1,39 @@
 import React, { useState, useEffect } from 'react';
-import { renderGraph } from '../graph/generateGraph';
+import { renderGraph } from '../graph/render_graph';
 import { s2017, sIncome2017, metro2017, metroIncome2017 } from '../../data/data';
 
 
 export const SubDemoSelectors = props => {
-  const [selectedSubDemo, setSelectedSubDemo] = useState();
   const [subDemoSelectors, setSubDemoSelectors] = useState();
-  const dataSet = (props.demo === 'Metro Area' ? metro2017 : s2017);
+  const dataSet = (props.demo === 'Metro Area') ? metro2017 : s2017;
+  const [demoData, setDemoData] = useState({
+    subDemo: null,
+    dataIndex: 1,
+    income: sIncome2017[0]
+  });
+
+  const setSubDemo = (subDemo, dataIndex, income) => {
+    setDemoData({
+      subDemo: subDemo,
+      dataIndex: dataIndex,
+      income: income
+    });
+  };
 
   const generateSubDemoSelectors = (subDemoData) => {
-    
     let selectors = [];
     let subDemos = subDemoData[0];
-    let subDemoIncomes = subDemoData[1];
+    let incomes = subDemoData[1];
     for (let i = 0; i < subDemos.length; i++) {
       let subDemo = subDemos[i][0];
       let dataIndex = subDemos[i][1];
-      let subDemoIncome = subDemoIncomes[i];
-      selectors.push(<a key={i} onClick={() => selectData({subDemo, dataIndex, subDemoIncome})}>{subDemo}</a>);
+      let income = incomes[i];
+      selectors.push(<a key={i} onClick={() => setSubDemo(subDemo, dataIndex, income)}>{subDemo}</a>);
     }
-    setSelectedSubDemo('Demographic');
+    setDemoData({
+      ...demoData,
+      subDemo: 'Demographic'
+    });
     return setSubDemoSelectors(selectors);
   };
 
@@ -41,29 +55,23 @@ export const SubDemoSelectors = props => {
 
     } else if (props.demo === 'Metro Area') {
       generateSubDemoSelectors(metroArea);
-
-    } else if (props.demo === 'National Average') {
-      document.getElementById("graph").innerHTML = 1;
-      renderGraph();
     }
-
   };
-
-  const selectData = ({ subDemo, dataIndex, subDemoIncome }) => {
-    setSelectedSubDemo(subDemo)
-    document.getElementById("graph").innerHTML = dataIndex;
-    renderGraph({ dataSet, dataIndex, subDemoIncome});
-  };
-
 
   useEffect(() => {
     generateSubDemoData();
   }, [props.demo]);
 
+  useEffect(() => {
+    debugger
+    props.setDataIndex(demoData.dataIndex);
+    renderGraph(dataSet, demoData.income);
+  }, [demoData]);
+
   return(
     <div id="subSelector" class="data-selector">
       <button id="sub" class="select">
-        {(props.demo === 'National Average') ? '' : selectedSubDemo}
+        {demoData.subDemo}
       </button>
       <div id="opt2" class="sub-opt">
         {subDemoSelectors}

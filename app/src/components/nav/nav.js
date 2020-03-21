@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { demos } from '../../data/data';
 import {SubDemoSelectors} from './sub_selector';
 
-const Nav = () => {
+const Nav = ({ setDataIndex }) => {
   const [demo, setDemo] = useState('National Average');
 
   const generateDemoSelectors = () => {
@@ -18,11 +18,11 @@ const Nav = () => {
           <div id="nav" class="nav">
             <div id="demoSelector" class="data-selector">
             <button id="demographic" class="select">{demo}</button>
-                  <div id="opt" class="data-options">
-                    {generateDemoSelectors()}
-                  </div>
+              <div id="opt" class="data-options">
+                {generateDemoSelectors()}
+              </div>
             </div>
-              <SubDemoSelectors demo={demo}/>
+              <SubDemoSelectors setDataIndex={setDataIndex} demo={demo}/>
             </div>
           </div>
       <div id="nav-about"></div>

@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
 import './stylesheets/_css_reset.css';
 import './stylesheets/application.css';
-import Nav from './components/nav/nav';
-import renderGraph from './components/graph/generateGraph';
+import Nav from './components/nav/Nav';
+import Graph from './components/graph/Graph';
+
 
 const App = () => {
+  const [dataIndex, setDataIndex] = useState(1);
 
   return (
       <div id="app">
 
-        <Nav />
+        <Nav setDataIndex={setDataIndex} />
 
         <div class="sub-header">
 
@@ -44,11 +46,7 @@ const App = () => {
 
           </div>
 
-          <div class="visualizer">
-            <div id="float">
-              <svg id="graph" class="graph">1</svg>
-            </div>
-          </div>
+          <Graph dataIndex={dataIndex} />
 
         </div>
 

@@ -1,7 +1,8 @@
-export const parseData = (data, selector) => {
-  
-  const header = data[0];
-  const parsed = [{ 'category': data[selector][0], 'children': [] }];
+export const parseData = dataSet => {
+  const selector = parseInt(document.getElementById("graph").innerHTML);
+  const header = dataSet[0];
+  debugger
+  const parsed = [{ 'category': dataSet[selector][0], 'children': [] }];
   const base = parsed[0];
   let level = 0;
   let j = 1;
@@ -10,7 +11,7 @@ export const parseData = (data, selector) => {
 
     let sub1, sub2, sub3;
     const cat = header[i];
-    const val = data[selector][j];
+    const val = dataSet[selector][j];
     const parent = { 'category': cat, 'children': [] };
     const child = { 'category': cat, 'cost': val };
 
