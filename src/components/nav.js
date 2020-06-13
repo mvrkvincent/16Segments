@@ -14,7 +14,7 @@ const Nav = () => {
 
     <div id="header">
       <div id="name">
-        <div id="title" onClick={() => setDemo('National Average')}>16 | Segments</div>
+        <div id="title" onClick={() => setDemo('National Average')}>16Segments</div>
           <div id="nav" class="nav">
             <div id="demoSelector" class="data-selector">
             <button id="demographic" class="select">{demo}</button>
@@ -27,11 +27,11 @@ const Nav = () => {
           </div>
       <div id="nav-about"></div>
       <div id="about">
-        <a href="mailto:connect@markvincent.dev"><i class="far fa-envelope"></i></a>
-        <a href="https://angel.co/mark-vincent-rodriguez"><i class="fab fa-angellist"></i></a>
-        <a href="https://github.com/mrkvncnt"><i class="fab fa-github"></i></a>
+        <a href="https://markvincent.dev/"><i class="fas fa-globe"></i></a>
+        <a href="https://github.com/mvrkvincent"><i class="fab fa-github"></i></a>
         <a href="https://www.linkedin.com/in/markvincentrodriguez/"><i class="fab fa-linkedin"></i></a>
-        <a href="https://mvrk.dev/"><i class="fas fa-globe"></i></a>
+        <a href="https://www.twitter.com/mvrkvincent/"><i class="fab fa-twitter"></i></a>
+        <a href="https://angel.co/mark-vincent-rodriguez"><i class="fab fa-angellist"></i></a>
       </div>
     </div>
 

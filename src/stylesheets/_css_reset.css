@@ -22,20 +22,12 @@ border: 0;
 font-size: 100%;
 font: inherit;
 vertical-align: baseline;
+font-family: 'Raleway';
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 display: block;
-}
-body {
-display: flex;
-justify-content: center;
-align-items: center;
-font-family: 'Raleway';
-height: 100vh;
-width: 100vw;
-line-height: 1;
 }
 ol, ul {
 list-style: none;
@@ -51,4 +43,12 @@ content: none;
 table {
 border-collapse: collapse;
 border-spacing: 0;
+}
+button,
+select {
+   -webkit-appearance: none;
+    -moz-appearance: none;
+}
+html, body, #root {
+   height: 100%;
 }
