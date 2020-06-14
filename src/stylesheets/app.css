@@ -260,7 +260,22 @@
     flex-direction: column;
   }
 
+  .select {
+    margin-top: 0.5rem;
+  }
+
+  #demoSelector {
+    margin: 0;
+  }
+  #demographic {
+    padding: 0;
+  }
+
   .data-options {
+    text-align: center;
+  }
+
+  .sub-opt {
     text-align: center;
   }
 
