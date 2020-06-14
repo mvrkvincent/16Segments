@@ -66,8 +66,6 @@
   display: flex;
   flex-direction: row;
   cursor: pointer;
-  border-right: 2px solid #000000;
-  padding-right: 1rem;
 }
 
 #title span {
@@ -201,6 +199,10 @@
 
 
 @media (max-width: 950px) {
+
+  .container {
+    padding: 0;
+  }
   .application {
     flex-direction: column;
   }
@@ -209,5 +211,26 @@
     height: 0px;
     width: 0px;
     overflow: hidden;
+  }
+
+  #header {
+    flex-direction: column;
+  }
+
+  #name {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  #nav {
+    flex-direction: column;
+  }
+
+  .section {
+      margin: 1rem 1rem 1rem 0;
+  }
+
+  #about {
+    justify-content: center;
   }
 }

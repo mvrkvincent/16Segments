@@ -12,7 +12,7 @@ export const s2017 = [
     "Healthcare", "Health Insurance", "Medical Services", "Drugs", "Medical Supplies", "***",
     "Entertainment", "Fees & Admissions", "AV Equipment & Services", "Other Entertainment", "Pets", "Toys & Hobbies", "*", "Miscellaneous Equipment", "***",
     "Personal Care", "***", "Reading", "***", "Education", "***", "Tobacco Products", "***", "Miscellaneous", "***", "Cash Contributions", "***",
-    "Personal Insurance & Pensions", "Personal Insurance", "Pensions & Social Security"],
+    "Insurance & Pensions", "Personal Insurance", "Pensions & Social Security"],
 
   ["National Average", 9967, null, null, null, 176, 388, null, 253, 181, 128, 186, 140, 55, null, 147, 303, null, 314, 274, 112, 136, null, 150, 117, 824, 423, 56, 3365, 558, null, null, null, 3265, 2065, 1616, 4167, 782, null, 381, 1420, 97, null, 238, 1118, 583, null, 439, 973, null, 177, 428, 150, null, 114, 515, 30, 280, 131, 916, null, 442, 694, 77, 379, 241, null, null, 1900, 2101, 53, 1968, null, 220, 954, 967, 700, 712, null, 3414, 872, 486, 156, null, 750, 985, null, 710, 159, 599, 762, 110, 1491, 332, 1010, 1873, null, 418, 6353],
   ["One", 4794, null, null, null, 83, 205, null, 118, 83, 65, 99, 74, 30, null, 76, 160, null, 171, 147, 63, 71, null, 77, 61, 456, 256, 27, 2101, 390, null, null, null, 1373, 1168, 1033, 4710, 451, null, 249, 938, 67, null, 199, 547, 352, null, 68, 670, null, 103, 253, 107, null, 75, 243, 11, 134, 92, 685, null, 235, 388, 13, 197, 173, null, null, 832, 896, 33, 999, null, 83, 794, 695, 390, 435, null, 2051, 479, 339, 98, null, 354, 667, null, 369, 80, 190, 496, 80, 743, 240, 773, 1403, null, 187, 2906],
