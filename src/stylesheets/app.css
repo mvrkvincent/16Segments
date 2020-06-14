@@ -232,12 +232,13 @@
   }
 
   #name {
+    margin-top: 1.5rem;
     flex-direction: column;
-    padding: 1rem;
   }
 
   #nav {
     flex-direction: column;
+    width: 100%;
   }
 
   .section {
@@ -260,23 +261,39 @@
     flex-direction: column;
   }
 
-  .select {
-    margin-top: 0.5rem;
-  }
-
   #demoSelector {
     margin: 0;
   }
+
+  .data-selector {
+    text-align: center;
+    width: 100%;
+  }
+
+  #sub,
   #demographic {
     padding: 0;
+    width: 100%;
   }
 
   .data-options {
     text-align: center;
+    width: 100%;
   }
 
   .sub-opt {
     text-align: center;
+    width: 100%;
+  }
+
+  .data-selector:hover .data-options,
+  .data-selector:hover .sub-opt {
+    display: flex;
+    flex-direction: column;
+    max-height: none;
+    min-width: none;
+    max-width: none;
+    overflow: auto;
   }
 
 }
