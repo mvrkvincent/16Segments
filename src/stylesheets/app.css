@@ -1,7 +1,14 @@
+#root {
+  display: flex;
+  justify-content: center;
+}
+
+#graph {
+  height: 100%;
+}
+
 .container {
-  /* flex-direction: column;
-  justify-content: space-between;
-  align-items: center; */
+  width: 80%;
   padding: 2rem;
 }
 
@@ -20,7 +27,7 @@
 .visualizer-div {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 
 .totals {
@@ -203,19 +210,16 @@
 }
 
 
-@media (max-width: 950px) {
+@media (max-width: 1080px) {
 
   .container {
+    width: 100%;
     padding: 0;
   }
-  .application {
-    flex-direction: column;
-  }
 
-  .visualizer-div {
-    height: 0px;
-    width: 0px;
-    overflow: hidden;
+  #float {
+    text-align: center;
+    margin-top: 1rem;
   }
 
   #header {
@@ -258,6 +262,14 @@
 
   .data-options {
     text-align: center;
+  }
+
+}
+
+@media (max-width: 725px) {
+
+  .application {
+    flex-direction: column-reverse;
   }
 
 }

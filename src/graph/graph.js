@@ -9,10 +9,11 @@ export const renderGraph = props => {
   let selectedIncome = props ? props.subDemoIncome : sIncome2017[0];
   const dataSelector = parseInt(document.getElementById("graph").innerHTML);
   const data = parseData(selectedDataSet, dataSelector);
+  const width = window.innerWidth;
 
   const colors = [];
   const color = d3.scaleOrdinal(d3.quantize(d3.interpolateRainbow, data.children.length));
-  const dia = 500;
+  const dia = width > 1080 ? 500 : 350;
   const rad = dia / 2;
   const partition = d3.partition().size([2 * Math.PI, rad]);
 
