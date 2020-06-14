@@ -212,6 +212,10 @@
 
 @media (max-width: 1080px) {
 
+  .application {
+    flex-direction: column-reverse;
+  }
+
   .container {
     width: 100%;
     padding: 0;
@@ -294,14 +298,6 @@
     min-width: none;
     max-width: none;
     overflow: auto;
-  }
-
-}
-
-@media (max-width: 725px) {
-
-  .application {
-    flex-direction: column-reverse;
   }
 
 }
