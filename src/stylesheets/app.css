@@ -9,7 +9,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 2rem 0;
+  margin: 1rem 0;
 }
 
 .ledger-div {
@@ -85,13 +85,14 @@
   text-align: left;
 }
 
-#about {
+.about {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   height: 24px;
+  margin-top: 1rem;
 }
-
-#about a {
+.about a {
   font-size: 20px;
   color: #999999;
   text-decoration: none;
@@ -100,7 +101,7 @@
   transition: all 0.5s ease;
 }
 
-#about a:hover {
+.about a:hover {
   color: #000000;
 }
 
@@ -188,11 +189,17 @@
 
 .footer {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   color: #999999;
   font-size: 10px;
   border-top: 1px solid lightgrey;
   padding-top: 1rem;
+}
+
+.copy {
+  display: flex;
+  justify-content: space-between;
 }
 
 
@@ -215,6 +222,11 @@
     flex-direction: column;
   }
 
+  #title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
   #name {
     flex-direction: column;
     padding: 1rem;
@@ -228,10 +240,6 @@
       margin: 1rem 1rem 1rem 0;
   }
 
-  #about {
-    justify-content: center;
-  }
-
   .footer {
     display: flex;
     flex-direction: column;
@@ -243,4 +251,13 @@
     border-top: 1px solid lightgrey;
     padding: 1rem 0;
   }
+
+  .copy {
+    flex-direction: column;
+  }
+
+  .data-options {
+    text-align: center;
+  }
+
 }
