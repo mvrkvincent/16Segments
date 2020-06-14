@@ -50,8 +50,8 @@ const App = () => {
         </div>
 
         <div class="footer">
-          <span>Source: Consumer Expenditure Survey, U.S. Bureau of Labor Statistics, September, 2018 | Mean values represented</span>
-          <span><i class="far fa-copyright"></i> mark vincent rodriguez | 2019</span>
+          <span>Source: Consumer Expenditure Survey, U.S. Bureau of Labor Statistics, September, 2018 - Mean values represented</span>
+        <span>Mark Vincent | Copyright 2019</span>
         </div>
       </div>
 
