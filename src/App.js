@@ -46,16 +46,16 @@ const App = () => {
         </div>
 
         <div class="footer">
-          <div className='copy'>
-            <span>Source: Consumer Expenditure Survey, U.S. Bureau of Labor Statistics, September, 2018 - Mean values represented</span>
-            <span>Mark Vincent | Copyright 2019</span>
-          </div>
           <div className="about">
             <a href="https://markvincent.dev/"><i class="fas fa-globe"></i></a>
             <a href="https://github.com/mvrkvincent"><i class="fab fa-github"></i></a>
             <a href="https://www.linkedin.com/in/markvincentrodriguez/"><i class="fab fa-linkedin"></i></a>
             <a href="https://www.twitter.com/mvrkvincent/"><i class="fab fa-twitter"></i></a>
             <a href="https://angel.co/mark-vincent-rodriguez"><i class="fab fa-angellist"></i></a>
+          </div>
+          <div className='copy'>
+            <span>Source: Consumer Expenditure Survey, U.S. Bureau of Labor Statistics, September, 2018 - Mean values represented</span>
+            <span>Mark Vincent | Copyright 2019</span>
           </div>
         </div>
       </div>
