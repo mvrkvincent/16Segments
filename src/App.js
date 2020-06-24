@@ -55,7 +55,7 @@ const App = () => {
           </div>
           <div className='copy'>
             <span>Source: Consumer Expenditure Survey, U.S. Bureau of Labor Statistics, September, 2018 - Mean values represented</span>
-            <span>Mark Vincent | Copyright 2019</span>
+            <span>Built by Mark Vincent in Brooklyn, NY | &copy; 2019</span>
           </div>
         </div>
       </div>
