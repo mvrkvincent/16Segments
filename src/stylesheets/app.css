@@ -1,6 +1,8 @@
 #root {
+  height: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 #graph {
@@ -211,6 +213,10 @@
 
 
 @media (max-width: 1080px) {
+
+  #root {
+    height: auto;
+  }
 
   .application {
     flex-direction: column-reverse;
