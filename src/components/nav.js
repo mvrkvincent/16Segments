@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { demos } from '../data/data';
 import {SubDemoSelectors} from './sub_selector';
 
@@ -17,7 +17,7 @@ const Nav = () => {
         <div id="title" onClick={() => setDemo('National Average')}>16Segments</div>
           <div id="nav" class="nav">
             <div id="demoSelector" class="data-selector">
-            <button id="demographic" class="select">{demo} <i class="fa-solid fa-angles-down"></i></button>
+            <button id="demographic" class="select">{demo} ⌄</button>
                   <div id="opt" class="data-options">
                     {generateDemoSelectors()}
                   </div>

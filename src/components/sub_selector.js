@@ -63,7 +63,7 @@ export const SubDemoSelectors = props => {
   return(
     <div id="subSelector" class="data-selector">
       <button id="sub" class="select">
-        {(props.demo === 'National Average') ? '' : selectedSubDemo}
+        {(props.demo === 'National Average') ? '' : `${selectedSubDemo} ⌄` }
       </button>
       <div id="opt2" class="sub-opt">
         {subDemoSelectors}
