@@ -41,6 +41,7 @@ const App = () => {
               <div id="float">
                 <svg id="graph">1</svg>
               </div>
+              <div className='instructions'>hover over segments for more detail</div>
           </div>
 
         </div>

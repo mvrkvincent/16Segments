@@ -32,6 +32,11 @@
   justify-content: center;
 }
 
+.instructions {
+  text-align: right;
+  color: #999999;
+}
+
 .totals {
   display: flex;
   flex-direction: column;
@@ -255,6 +260,10 @@
       margin: 1rem 1rem 1rem 0;
   }
 
+  .instructions {
+    text-align: center;
+  }
+  
   .footer {
     display: flex;
     flex-direction: column;

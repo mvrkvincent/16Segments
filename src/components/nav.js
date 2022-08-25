@@ -17,7 +17,7 @@ const Nav = () => {
         <div id="title" onClick={() => setDemo('National Average')}>16Segments</div>
           <div id="nav" class="nav">
             <div id="demoSelector" class="data-selector">
-            <button id="demographic" class="select">{demo}</button>
+            <button id="demographic" class="select">{demo} <i class="fa-solid fa-angles-down"></i></button>
                   <div id="opt" class="data-options">
                     {generateDemoSelectors()}
                   </div>
